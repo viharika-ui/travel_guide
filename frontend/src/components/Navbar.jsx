@@ -18,6 +18,7 @@ export default function Navbar() {
   const handleLogout = async () => {
     await logout();
     navigate("/");
+    alert("Logout successful!")
     setUserMenuOpen(false);
   };
 
@@ -102,9 +103,28 @@ export default function Navbar() {
         </div>
       )}
 
-      <Link to="/auth" className="auth-btn">
-        {t("nav.login")}
-      </Link>
+      {user ? (
+  <div className="user-menu">
+    <div className="avatar" onClick={() => setUserMenuOpen(!userMenuOpen)}>
+      {user.avatar ? (
+        <img src={user.avatar} alt="profile" />
+      ) : (
+        <span>{user.name?.charAt(0).toUpperCase()}</span>
+      )}
+    </div>
+
+    {userMenuOpen && (
+      <div className="user-dropdown">
+        <Link to="/profile">Profile</Link>
+        <button onClick={handleLogout}>Logout</button>
+      </div>
+    )}
+  </div>
+) : (
+  <Link to="/auth" className="auth-btn">Login</Link>
+)}
+
+
     </div>
 
   </div>

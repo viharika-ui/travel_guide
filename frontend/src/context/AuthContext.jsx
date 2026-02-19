@@ -58,14 +58,14 @@ export function AuthProvider({ children }) {
   };
 
   const logout = async () => {
-    try {
-      await api.post("/auth/logout");
-    } catch (_) {}
-    setUser(null);
-    localStorage.removeItem("user");
-    localStorage.removeItem("token");
-    window.dispatchEvent(new Event("auth-change"));
-  };
+  try {
+    await api.post("/auth/logout");
+  } catch (_) {}
+
+  setUser(null);
+  localStorage.removeItem("user");
+};
+
 
   return (
     <AuthContext.Provider value={{ user, loading, login, register, googleLogin, logout, refreshUser: fetchUser, setUserFromToken: setUserFromToken }}>

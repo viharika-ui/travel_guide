@@ -33,6 +33,7 @@ function sendToken(res, user) {
       email: user.email,
       role: user.role,
       preferredLanguage: user.preferredLanguage,
+      avatar: user.avatar,
     },
     token,
   });

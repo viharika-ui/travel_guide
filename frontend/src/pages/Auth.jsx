@@ -3,8 +3,11 @@ import api from "../api/axios";
 import "./Auth.css";
 import { FaEnvelope, FaLock,FaPersonWalkingLuggage } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+
 
 export default function Auth() {
+  const { login } = useAuth();
   const [isLogin, setIsLogin] = useState(true);
   const [form, setForm] = useState({
     name: "",
@@ -22,17 +25,17 @@ export default function Auth() {
 
     try {
       if (isLogin) {
-        await api.post("/auth/login", {
-          email: form.email,
-          password: form.password,
-        });
-        alert("Login successful");
-        navigate('/')
+        await login(form.email, form.password);
+        navigate("/", { replace: true });
+        alert("Login successful!")
       } else {
-        await api.post("/auth/register", form);
-        alert("Registration successful");
-        setIsLogin(true);
-        navigate('/')
+         await api.post("/auth/register", form);
+
+        // immediately login after register
+        await login(form.email, form.password);
+
+        navigate("/", { replace: true });
+        alert("Registration successful!")
       }
     } catch (err) {
       alert(err.response?.data?.message || "Error");
