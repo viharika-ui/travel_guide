@@ -1,19 +1,15 @@
 import mongoose from "mongoose";
 
-const destinationSchema = new mongoose.Schema(
-  {
-    name: { type: mongoose.Schema.Types.Mixed, required: true, default: {} },
-    description: { type: mongoose.Schema.Types.Mixed, default: {} },
-    stateId: { type: mongoose.Schema.Types.ObjectId, ref: "State", required: true },
-    images: [{ type: String }],
-    coordinates: {
-      lat: { type: Number },
-      lng: { type: Number },
-    },
-    categories: [{ type: String }],
-    rating: { type: Number, default: 0 },
-  },
-  { timestamps: true }
-);
+const destinationSchema = new mongoose.Schema({
+  id: { type: Number, required: true, unique: true },   // ⭐ important
+  name: String,
+  description: String,
+  location: String,
+  image: String,
+  region: String,
+  category: String,
+  rating: Number,
+  bestTime: String
+});
 
 export default mongoose.model("Destination", destinationSchema);

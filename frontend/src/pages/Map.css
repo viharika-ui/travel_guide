@@ -1,0 +1,73 @@
+.map-page {
+  display: flex;
+  height: 100vh;
+  font-family: Poppins, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 300px;
+  background: #f5f7fb;
+  padding: 20px;
+  overflow-y: auto;
+  border-right: 1px solid #ddd;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.filters label {
+  display: block;
+  margin: 6px 0;
+}
+
+.regions button {
+  width: 100%;
+  margin: 6px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #e3f2fd;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.regions button:hover {
+  background: #90caf9;
+}
+
+.selected {
+  margin-top: 20px;
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+/* Map */
+.map-container {
+  flex: 1;
+}
+
+/* Legend */
+.legend {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin: 4px 0;
+}
+
+.legend-item img {
+  width: 18px;
+  margin-right: 8px;
+}

@@ -10,6 +10,17 @@ const userSchema = new mongoose.Schema(
     googleId: { type: String, default: null },
     preferredLanguage: { type: String, default: "en" },
     avatar: { type: String, default: "" },
+    phone: { type: String, default: "" },
+    age: { type: Number },
+    gender: { type: String, default: "" },
+    address: { type: String, default: "" },
+    city: { type: String, default: "" },
+    state: { type: String, default: "" },
+    country: { type: String, default: "" },
+    emergencyContact: { type: String, default: "" },
+    passportNumber: { type: String, default: "" },
+    avatar: { type: String, default: "" }
+
 
   },
   { timestamps: true }

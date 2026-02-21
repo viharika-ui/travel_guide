@@ -115,8 +115,14 @@ export default function Navbar() {
 
     {userMenuOpen && (
       <div className="user-dropdown">
-        <Link to="/profile">Profile</Link>
-        <button onClick={handleLogout}>Logout</button>
+        <Link
+  to="/profile"
+  onClick={() => setUserMenuOpen(false)}
+>
+  {t("nav.profile")}
+</Link>
+
+        <Link onClick={handleLogout}>{t("nav.logout")}</Link>
       </div>
     )}
   </div>

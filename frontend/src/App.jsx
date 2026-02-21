@@ -11,6 +11,13 @@ import Dashboard from "./pages/Dashboard";
 import GoogleAuthCallback from "./pages/GoogleAuthCallback";
 import Auth from "./pages/Auth";
 import Navbar from "./components/Navbar";
+import Profile from "./pages/Profile";
+import Packages from "./pages/Packages";
+import PackageDetails from "./pages/PackageDetails";
+import "leaflet/dist/leaflet.css";
+import Map from "./pages/Map";
+
+
 
 function PrivateRoute({ children }) {
   const user = JSON.parse(localStorage.getItem("user") || "null");
@@ -28,7 +35,11 @@ export default function App() {
             <Route path="explore" element={<Explore />} />
             <Route path="destination/:id" element={<Destination />} />
             <Route path="map" element={<MapPage />} />
-            <Route path="booking/:destinationId" element={<Booking />} />
+            <Route path="booking/:id" element={<Booking />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/packages" element={<Packages />} />
+            <Route path="/packages/:id" element={<PackageDetails />} />
+
             <Route
               path="dashboard/*"
               element={

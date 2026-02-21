@@ -38,17 +38,20 @@ export async function listByRegion(req, res, next) {
   }
 }
 
-export async function getOne(req, res, next) {
+export const getOne = async (req, res) => {
   try {
-    const destination = await Destination.findById(req.params.id).populate("stateId").lean();
-    if (!destination) return res.status(404).json({ message: "Destination not found" });
-    const raw = req.query.raw === "1" || req.user?.role === "admin";
-    const translated = raw ? destination : translateDoc(destination, MULTILINGUAL_FIELDS, req.lang);
-    res.json({ destination: translated });
+    const id = Number(req.params.id);
+
+    const destination = await Destination.findOne({ id: id });
+
+    if (!destination)
+      return res.status(404).json({ message: "Destination not found" });
+
+    res.json(destination);
   } catch (err) {
-    next(err);
+    res.status(500).json({ error: err.message });
   }
-}
+};
 
 export async function create(req, res, next) {
   try {

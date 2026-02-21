@@ -1,4 +1,5 @@
-import "dotenv/config";
+import dotenv from "dotenv";
+dotenv.config();
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
@@ -12,16 +13,28 @@ import destinationRoutes from "./routes/destinations.js";
 import packageRoutes from "./routes/packages.js";
 import bookingRoutes from "./routes/bookings.js";
 import newsletterRoutes from "./routes/newsletter.js";
+import paymentRoutes from "./routes/payments.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+console.log("RAZOR KEY:", process.env.RAZORPAY_KEY_ID);
+console.log("Allowed origins:", [process.env.FRONTEND_URL, process.env.ADMIN_URL]);
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  process.env.ADMIN_URL
+].filter(Boolean);
 
+console.log("Allowed origins:", allowedOrigins);
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL, process.env.ADMIN_URL].filter(Boolean),
+    origin: allowedOrigins,
     credentials: true,
   })
 );
+app.options("*", cors({
+  origin: allowedOrigins,
+  credentials: true,
+}));
 app.use(cookieParser());
 app.use(express.json());
 app.use("/uploads", express.static("uploads"));
@@ -34,6 +47,8 @@ app.use("/api/destinations", destinationRoutes);
 app.use("/api/packages", packageRoutes);
 app.use("/api/bookings", bookingRoutes);
 app.use("/api/newsletter", newsletterRoutes);
+app.use("/uploads", express.static("uploads"));
+app.use("/api/payment", paymentRoutes);
 
 app.use(errorHandler);
 

@@ -1,16 +1,17 @@
 import express from "express";
-import { auth, optionalAuth } from "../middleware/auth.js";
-import { admin } from "../middleware/admin.js";
-import { language } from "../middleware/language.js";
-import * as ctrl from "../controllers/packageController.js";
+import Package from "../models/Package.js";
 
 const router = express.Router();
-router.use(language);
 
-router.get("/", optionalAuth, ctrl.list);
-router.get("/:id", optionalAuth, ctrl.getOne);
-router.post("/", auth, admin, ctrl.create);
-router.put("/:id", auth, admin, ctrl.update);
-router.delete("/:id", auth, admin, ctrl.remove);
+router.get("/", async (req, res) => {
+  const data = await Package.find();
+  res.json(data);
+});
+
+router.get("/:id", async (req, res) => {
+  const data = await Package.findById(req.params.id);
+  res.json(data);
+});
 
 export default router;
+

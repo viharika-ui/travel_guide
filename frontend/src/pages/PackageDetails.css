@@ -1,0 +1,149 @@
+/* PAGE BACKGROUND */
+.package-page {
+  background: linear-gradient(180deg,#eef5fb,#dfeef7);
+  min-height: 100vh;
+  padding: 40px 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* MAIN CARD */
+.package-container {
+  width: 1100px;
+  margin: auto;
+  background: white;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* TOP SECTION */
+.package-top {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.package-image {
+  width: 100%;
+  height: 280px;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.package-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0f2940;
+  margin-bottom: 25px;
+}
+
+/* SECTION HEADINGS */
+.section-title {
+  font-size: 22px;
+  margin: 30px 0 15px;
+  color: #163a59;
+  font-weight: 600;
+}
+
+/* OPTION BOX */
+.option-card {
+  border: 1px solid #e3e8ee;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.option-card:hover {
+  border-color: #2bb6d6;
+  background: #f3fbff;
+}
+
+.option-card input {
+  transform: scale(1.2);
+}
+
+.option-price {
+  margin-left: auto;
+  font-weight: 600;
+  color: #0d8ecf;
+}
+
+/* DATE INPUT */
+.date-input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccd6df;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+/* GUIDE CHECKBOX */
+.guide-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+/* STICKY PAYMENT BAR */
+.payment-bar {
+  position: sticky;
+  bottom: 20px;
+  margin-top: 50px;
+  background: #e9f4fb;
+  border-radius: 16px;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-price {
+  font-size: 28px;
+  font-weight: bold;
+  color: #127bb8;
+}
+
+.pay-btn {
+  background: linear-gradient(90deg,#2bb6d6,#0d8ecf);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.pay-btn:hover {
+  transform: scale(1.05);
+}
+
+.pay-btn:disabled {
+  background: #c6d5df;
+  cursor: not-allowed;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .package-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .package-top {
+    grid-template-columns: 1fr;
+  }
+
+  .package-image {
+    height: 220px;
+  }
+}
+

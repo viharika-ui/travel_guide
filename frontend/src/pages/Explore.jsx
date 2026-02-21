@@ -1,63 +1,78 @@
-import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import api from "../api/axios";
-import DestinationCard from "../components/DestinationCard";
-import Filters from "../components/Filters";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./explore.css";
+import { regions, places } from "../data/exploreData";
 
 export default function Explore() {
-  const { t } = useTranslation();
-  const [searchParams] = useSearchParams();
-  const regionIdParam = searchParams.get("regionId");
-  const qParam = searchParams.get("q");
+  const [activeRegion, setActiveRegion] = useState("All");
+  const navigate = useNavigate();
 
-  const [regions, setRegions] = useState([]);
-  const [destinations, setDestinations] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [regionId, setRegionId] = useState(regionIdParam || null);
-
-  useEffect(() => {
-    setRegionId(regionIdParam || null);
-  }, [regionIdParam]);
-
-  useEffect(() => {
-    setLoading(true);
-    api.get("/regions").then((res) => setRegions(res.data.regions || []));
-    const params = regionId ? { regionId } : {};
-    api.get("/destinations", { params }).then((res) => {
-      let list = res.data.destinations || [];
-      if (qParam) {
-        const q = qParam.toLowerCase();
-        list = list.filter(
-          (d) =>
-            (d.name || "").toLowerCase().includes(q) ||
-            (d.stateId?.name || "").toLowerCase().includes(q)
-        );
-      }
-      setDestinations(list);
-      setLoading(false);
-    });
-  }, [regionId, qParam]);
+  const filteredPlaces =
+    activeRegion === "All"
+      ? places
+      : places.filter((p) => p.region === activeRegion);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-navy mb-6">{t("explore.title")}</h1>
-      <Filters
-        regions={regions}
-        selectedRegionId={regionId}
-        onRegionChange={setRegionId}
-      />
-      {loading ? (
-        <p className="text-slate-500">{t("common.loading")}</p>
-      ) : destinations.length === 0 ? (
-        <p className="text-slate-500">{t("explore.noDestinations")}</p>
-      ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {destinations.map((d) => (
-            <DestinationCard key={d._id} destination={d} />
-          ))}
+    <div className="explore-page">
+
+      {/* HERO */}
+      <div className="explore-hero">
+        <h1>Explore India</h1>
+        <p>Discover the diverse regions and states of incredible India</p>
+      </div>
+
+      {/* DECISION BOXES */}
+      <div className="decision-section">
+        <div className="decision-card">
+          <h2>Already decided where to go?</h2>
+          <p>Choose your destination.</p>
+          <button onClick={() => navigate("/destination/1")}>
+            Browse Destinations
+          </button>
         </div>
-      )}
+
+        <div className="decision-card">
+          <h2>Not sure yet?</h2>
+          <p>We have popular packages for you.</p>
+          
+          <button style={{marginTop:"55px"}} onClick={() => navigate("/packages")}>
+            View Packages
+          </button>
+        </div>
+      </div>
+
+      {/* REGION FILTER */}
+      <div className="region-tabs">
+        {regions.map((r) => (
+          <button
+            key={r}
+            className={activeRegion === r ? "active" : ""}
+            onClick={() => setActiveRegion(r)}
+          >
+            {r}
+          </button>
+        ))}
+      </div>
+
+      {/* PLACES */}
+      <div className="places-grid">
+        {filteredPlaces.map((place) => (
+          <div key={place.id} className="place-card">
+            <img src={place.image} alt={place.name} />
+            <h3>{place.name}</h3>
+            <span>{place.region}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* POPULAR PACKAGES */}
+      <div className="packages-section">
+        <h2>Popular Packages</h2>
+        <button onClick={() => navigate("/packages")}>
+          Explore All Packages
+        </button>
+      </div>
+
     </div>
   );
 }
