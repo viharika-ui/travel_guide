@@ -19,11 +19,7 @@ import Map from "./pages/Map";
 import TransportSearch from "./pages/TransportSearch";
 import DestinationDetail from "./pages/DestinationDetail";
 import DestinationBooking from "./pages/DestinationBooking";
-
-// inside <Routes>:
-
-
-
+import TravelGuides from "./pages/travel_guide";
 
 function PrivateRoute({ children }) {
   const user = JSON.parse(localStorage.getItem("user") || "null");
@@ -48,7 +44,7 @@ export default function App() {
             <Route path="/transport-search" element={<TransportSearch />} />
             <Route path="/destination-detail/:id" element={<DestinationDetail />} />
             <Route path="/destination-booking/:id" element={<DestinationBooking />} />
-
+            <Route path="/travel-guides" element={<TravelGuides />} />
             <Route
               path="dashboard/*"
               element={

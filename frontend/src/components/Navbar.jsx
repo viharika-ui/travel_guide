@@ -75,6 +75,7 @@ export default function Navbar() {
       <Link to="/">{t("nav.home")}</Link>
       <Link to="/explore">{t("nav.explore")}</Link>
       <Link to="/map">{t("nav.map")}</Link>
+      <Link to="/travel-guides">Travel Guides</Link>
     </div>
 
     {/* Right - Language + Login */}

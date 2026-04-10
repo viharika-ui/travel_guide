@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
-import { getUsers, updateUser, deleteUser } from "../api/api";
+import { getUsers, deleteUser } from "../api/api";
 import {
-  C, Btn, Input, Select, Modal, Table, TR, TD, Badge, Pagination,
+  C, Btn, Modal, Table, TR, TD, Badge, Pagination,
   SearchBar, PageHeader, Avatar, Toast, ConfirmDialog, Spinner,
 } from "../components";
 
@@ -13,12 +13,8 @@ export default function Users() {
   const [search, setSearch] = useState("");
   const [roleFilter, setRoleFilter] = useState("");
   const [loading, setLoading] = useState(true);
-  const [editUser, setEditUser] = useState(null);
-  const [viewUser, setViewUser] = useState(null);
   const [deleteId, setDeleteId] = useState(null);
   const [toast, setToast] = useState(null);
-  const [form, setForm] = useState({});
-  const [saving, setSaving] = useState(false);
 
   const showToast = (msg, type = "success") => {
     setToast({ msg, type });
@@ -49,20 +45,6 @@ export default function Users() {
     const t = setTimeout(() => { setPage(1); }, 400);
     return () => clearTimeout(t);
   }, [search]);
-
-  async function handleSave() {
-    setSaving(true);
-    try {
-      await updateUser(editUser._id, form);
-      showToast("User updated successfully");
-      setEditUser(null);
-      load();
-    } catch (err) {
-      showToast(err.message, "error");
-    } finally {
-      setSaving(false);
-    }
-  }
 
   async function handleDelete() {
     try {
@@ -109,7 +91,6 @@ export default function Users() {
                 <TD style={{ color: C.muted }}>{new Date(u.createdAt).toLocaleDateString()}</TD>
                 <TD>
                   <div style={{ display: "flex", gap: 8 }}>
-                    <Btn size="sm" variant="ghost" onClick={() => { setEditUser(u); setForm({ name: u.name, email: u.email, role: u.role, phone: u.phone, city: u.city, state: u.state, country: u.country }); }}>Edit</Btn>
                     <Btn size="sm" variant="danger" onClick={() => setDeleteId(u._id)}>Delete</Btn>
                   </div>
                 </TD>
@@ -118,26 +99,6 @@ export default function Users() {
           </Table>
           <Pagination page={page} pages={pages} onPage={setPage} />
         </>
-      )}
-
-      {/* Edit Modal */}
-      {editUser && (
-        <Modal title={`Edit User — ${editUser.name}`} onClose={() => setEditUser(null)}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0 16px" }}>
-            <Input label="Name" value={form.name || ""} onChange={e => setForm({ ...form, name: e.target.value })} />
-            <Input label="Email" type="email" value={form.email || ""} onChange={e => setForm({ ...form, email: e.target.value })} />
-            <Input label="Phone" value={form.phone || ""} onChange={e => setForm({ ...form, phone: e.target.value })} />
-            <Select label="Role" value={form.role || "user"} onChange={e => setForm({ ...form, role: e.target.value })}
-              options={[{ value: "user", label: "User" }, { value: "admin", label: "Admin" }]} />
-            <Input label="City" value={form.city || ""} onChange={e => setForm({ ...form, city: e.target.value })} />
-            <Input label="State" value={form.state || ""} onChange={e => setForm({ ...form, state: e.target.value })} />
-            <Input label="Country" value={form.country || ""} onChange={e => setForm({ ...form, country: e.target.value })} style={{ gridColumn: "span 2" }} />
-          </div>
-          <div style={{ display: "flex", gap: 12, justifyContent: "flex-end", marginTop: 8 }}>
-            <Btn variant="ghost" onClick={() => setEditUser(null)}>Cancel</Btn>
-            <Btn onClick={handleSave} disabled={saving}>{saving ? "Saving..." : "Save Changes"}</Btn>
-          </div>
-        </Modal>
       )}
 
       {deleteId && <ConfirmDialog msg="Are you sure you want to delete this user?" onConfirm={handleDelete} onCancel={() => setDeleteId(null)} />}
