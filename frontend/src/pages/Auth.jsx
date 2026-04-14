@@ -4,7 +4,7 @@ import "./Auth.css";
 import { FaEnvelope, FaLock,FaPersonWalkingLuggage } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-
+import { toast } from "react-toastify";
 
 export default function Auth() {
   const { login } = useAuth();
@@ -27,7 +27,7 @@ export default function Auth() {
       if (isLogin) {
         await login(form.email, form.password);
         navigate("/", { replace: true });
-        alert("Login successful!")
+        toast.success("Login successful!");
       } else {
          await api.post("/auth/register", form);
 
@@ -35,10 +35,10 @@ export default function Auth() {
         await login(form.email, form.password);
 
         navigate("/", { replace: true });
-        alert("Registration successful!")
+        toast.success("Registration successful!");
       }
     } catch (err) {
-      alert(err.response?.data?.message || "Error");
+      toast.error(err.response?.data?.message || "Error");
     }
   };
 

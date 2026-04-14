@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { fetchPackageById } from "../api/packageApi";
+import { toast } from "react-toastify";
 import "./Booking.css";
 
 const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
@@ -100,7 +101,7 @@ export default function Booking() {
 
   // ── Razorpay payment flow ─────────────────────────────────────────────────
   const handlePayment = async () => {
-    if (!travelDate) { alert("Please select a travel date."); return; }
+    if (!travelDate) { toast.error("Please select a travel date.", { theme: "colored" }); return; }
 
     try {
       setPaying(true);
@@ -137,8 +138,9 @@ export default function Booking() {
             });
             setPaymentId(response.razorpay_payment_id);
             setSubmitted(true);
+            toast.success("Payment successful! Booking confirmed.");
           } catch {
-            alert("Payment verification failed. Please contact support.");
+            toast.error("Payment verification failed. Please contact support.");
           } finally {
             setPaying(false);
           }
@@ -149,13 +151,13 @@ export default function Booking() {
 
       const rzp = new window.Razorpay(options);
       rzp.on("payment.failed", (response) => {
-        alert(`Payment failed: ${response.error.description}`);
+        toast.error(`Payment failed: ${response.error.description}`);
         setPaying(false);
       });
       rzp.open();
 
     } catch (err) {
-      alert(`Could not initiate payment: ${err.message}`);
+      toast.error(`Could not initiate payment: ${err.message}`);
       setPaying(false);
     }
   };

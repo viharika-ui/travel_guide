@@ -17,10 +17,8 @@ import PackageDetails from "./pages/PackageDetails";
 import "leaflet/dist/leaflet.css";
 import Map from "./pages/Map";
 import TransportSearch from "./pages/TransportSearch";
-
-
-
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function PrivateRoute({ children }) {
   const user = JSON.parse(localStorage.getItem("user") || "null");
@@ -31,7 +29,18 @@ export default function App() {
   return (
     <AuthProvider>
       <LanguageProvider>
-        
+        <ToastContainer 
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+        />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
