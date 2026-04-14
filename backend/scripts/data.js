@@ -178,7 +178,7 @@ const data = [
           {
             name: "Varanasi",
             description: "One of the world's oldest living cities on the Ganges",
-            image: "https://images.unsplash.com/photo-1561361058-c24e01f5f252?w=600&q=80",
+            image: "https://images.unsplash.com/photo-1599831069477-b2acdc0bcb91?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             bestTimeToVisit: "October – March"
           },
           {
@@ -226,7 +226,7 @@ const data = [
           {
             name: "Darjeeling",
             description: "Land of tea gardens with views of Kangchenjunga",
-            image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&q=80",
+            image: "https://swastiktours.com/wp-content/uploads/2024/05/Darjeeling-Cable-Car-1-700x450.webp",
             bestTimeToVisit: "March – May, September – November"
           },
           {
