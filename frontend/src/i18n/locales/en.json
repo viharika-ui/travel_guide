@@ -25,15 +25,6 @@
     "subscribe": "Subscribe",
     "emailPlaceholder": "Your email"
   },
-  "explore": {
-    "title": "Explore India",
-    "filterByRegion": "Filter by Region",
-    "allRegions": "All Regions",
-    "states": "States",
-    "destinations": "Destinations",
-    "viewDetails": "View Details",
-    "noDestinations": "No destinations found"
-  },
   "destination": {
     "description": "Description",
     "packages": "Packages",
@@ -77,15 +68,18 @@
     "dates": "Dates"
   },
   "auth": {
-    "register": "Register",
-    "login": "Login",
-    "name": "Name",
-    "email": "Email",
-    "password": "Password",
-    "confirmPassword": "Confirm Password",
-    "googleLogin": "Continue with Google",
-    "alreadyHaveAccount": "Already have an account?",
-    "dontHaveAccount": "Don't have an account?"
+  "register": "Register",
+  "login": "Login",
+  "name": "Name",
+  "email": "Email",
+  "password": "Password",
+  "confirmPassword": "Confirm Password",
+  "googleLogin": "Continue with Google",
+  "alreadyHaveAccount": "Already have an account?",
+  "dontHaveAccount": "Don't have an account?",
+  "loginSuccess": "Login successful!",
+  "registerSuccess": "Registration successful!",
+  "orContinueWith": "or continue with"
   },
   "common": {
     "loading": "Loading...",
@@ -94,5 +88,85 @@
     "next": "Next",
     "submit": "Submit",
     "cancel": "Cancel"
-  }
+  },
+  "categories": {
+  "title": "Explore by Category",
+  "adventure": "Adventure",
+  "beaches": "Beaches",
+  "heritage": "Heritage",
+  "nature": "Nature"
+  },
+  "explore": {
+  "title": "Explore India",
+  "filterByRegion": "Filter by Region",
+  "allRegions": "All Regions",
+  "states": "States",
+  "destinations": "Destinations",
+  "viewDetails": "View Details",
+  "noDestinations": "No destinations found",
+  "heroTitle": "Explore India",
+  "heroSubtitle": "Discover the diverse regions and states of incredible India",
+  "decidedTitle": "Already decided where to go?",
+  "decidedDesc": "Choose your destination.",
+  "browseDestinations": "Browse Destinations",
+  "notSureTitle": "Not sure yet?",
+  "notSureDesc": "We have popular packages for you.",
+  "viewPackages": "View Packages"
+  },
+  "packages": {
+  "curatedLabel": "Curated For You",
+  "heroTitle": "Popular Tour Packages",
+  "heroSub": "Hand-picked journeys across India — from Himalayan peaks to tropical shores",
+  "all": "All",
+  "retry": "Retry",
+  "noPackages": "No packages found for this category.",
+  "viewDetails": "View Details",
+  "perPerson": "per person",
+  "highlights": "Highlights",
+  "itinerary": "Itinerary",
+  "included": "What's Included",
+  "hotels": "Hotels",
+  "transport": "Transport Options",
+  "nightRate": "night",
+  "guideTitle": "Travel Guide",
+  "guideAvailable": "Professional Guide Available",
+  "guideLanguages": "Languages",
+  "bookThis": "Book This Package",
+  "from": "from",
+  "error": "Something went wrong"
+},
+"destinationPage": {
+  "explore": "Explore",
+  "famousDestinations": "Famous destinations waiting for you",
+  "regions": "Regions",
+  "statesOf": "States of",
+  "chooseState": "Choose a state to explore",
+  "discoverIndia": "Discover India",
+  "whereToWander": "Where do you want to wander?",
+  "heroSubtitle": "Pick a region and we'll guide you to the finest destinations across the subcontinent.",
+  "noResults": "No results found.",
+  "bestTime": "Best time:"
+},
+"destinationDetail": {
+  "loading": "Loading destination...",
+  "notFound": "Destination not found.",
+  "india": "India",
+  "about": "About this Destination",
+  "quickFacts": "Quick Facts",
+  "bestTime": "Best Time",
+  "state": "State",
+  "region": "Region",
+  "climate": "Climate",
+  "climateValue": "Tropical / Varied",
+  "ready": "Ready to visit?",
+  "planTrip": "Plan your perfect trip with flights, trains, buses, ferry, hotel & guide",
+  "flightTrain": "Flights & Trains",
+  "busFerry": "Buses & Ferry",
+  "hotelSelection": "Hotel selection",
+  "razorpay": "Razorpay secured",
+  "bookNow": "Book This Destination",
+  "secureCheckout": "Safe & secure checkout"
 }
+
+}
+
