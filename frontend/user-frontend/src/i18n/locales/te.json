@@ -1,1 +1,135 @@
-{"nav":{"home":"హోమ్","explore":"అన్వేషించండి","map":"మ్యాప్","dashboard":"డాష్‌బోర్డ్","login":"లాగిన్","register":"నమోదు","logout":"లాగౌట్","bookings":"నా బుకింగ్లు","profile":"ప్రొఫైల్","language":"భాష"},"home":{"heroTitle":"అద్భుత భారతదేశం","heroSubtitle":"వైవిధ్యం, సంస్కృతి మరియు వారసత్వం యొక్క భూమిని అన్వేషించండి","searchPlaceholder":"గమనస్థానాలను శోధించండి...","search":"శోధించండి","popularDestinations":"జనాదరణ గమనస్థానాలు","regions":"ప్రాంతాలు","experiences":"అనుభవాలు","testimonials":"ప్రయాణికులు ఏమి చెబుతారు","newsletterTitle":"నవీకరించబడండి","newsletterSubtitle":"ప్రయాణ చిట్కాలు మరియు ఆఫర్ల కోసం సబ్‌స్క్రైబ్ చేయండి","subscribe":"సబ్‌స్క్రైబ్ చేయండి","emailPlaceholder":"మీ ఇమెయిల్"},"explore":{"title":"భారతదేశాన్ని అన్వేషించండి","filterByRegion":"ప్రాంతం ద్వారా ఫిల్టర్","allRegions":"అన్ని ప్రాంతాలు","states":"రాష్ట్రాలు","destinations":"గమనస్థానాలు","viewDetails":"వివరాలను వీక్షించండి","noDestinations":"గమనస్థానాలు కనుగొనబడలేదు"},"destination":{"description":"వివరణ","packages":"ప్యాకేజీలు","bookNow":"ఇప్పుడే బుక్ చేయండి","duration":"వ్యవధి","price":"ధర","from":"నుండి","map":"స్థానం"},"booking":{"title":"మీ ట్రిప్ బుక్ చేయండి","step1":"ప్యాకేజీ ఎంచుకోండి","step2":"ప్రయాణికుల వివరాలు","step3":"చెల్లింపు","step4":"నిర్ధారణ","travelers":"ప్రయాణికులు","addTraveler":"ప్రయాణిని జోడించండి","name":"పూర్తి పేరు","email":"ఇమెయిల్","phone":"ఫోన్","travelDate":"ప్రయాణ తేదీ","mockPayment":"మాక్ చెల్లింపు","payNow":"ఇప్పుడే చెల్లించండి","confirmBooking":"బుకింగ్ నిర్ధారించండి","success":"బుకింగ్ నిర్ధారించబడింది!","bookingId":"బుకింగ్ ID"},"map":{"title":"మ్యాప్‌లో అన్వేషించండి","filterByCategory":"వర్గం ద్వారా ఫిల్టర్","allCategories":"అన్నీ"},"dashboard":{"myBookings":"నా బుకింగ్లు","profile":"ప్రొఫైల్","preferredLanguage":"ఇష్టపడే భాష","save":"సేవ్ చేయండి","noBookings":"ఇంకా బుకింగ్లు లేవు","status":"స్థితి","paymentStatus":"చెల్లింపు","dates":"తేదీలు"},"auth":{"register":"నమోదు","login":"లాగిన్","name":"పేరు","email":"ఇమెయిల్","password":"పాస్‌వర్డ్","confirmPassword":"పాస్‌వర్డ్ నిర్ధారించండి","googleLogin":"Googleతో కొనసాగించండి","alreadyHaveAccount":"ఇప్పటికే ఖాతా ఉందా?","dontHaveAccount":"ఖాతా లేదా?"},"common":{"loading":"లోడ్ అవుతోంది...","error":"ఏదో తప్పు జరిగింది","back":"వెనుక","next":"తరువాత","submit":"సమర్పించండి","cancel":"రద్దు"}}
+{
+  "nav": {
+    "home": "హోమ్",
+    "explore": "అన్వేషించండి!",
+    "map": "పటము",
+    "dashboard": "డాష్‌బోర్డ్",
+    "login": "లాగిన్",
+    "register": "రిజిస్టర్ చేసుకోండి",
+    "logout": "లాగ్అవుట్ అవ్వండి",
+    "bookings": "నా బుకింగ్ ‌ లు",
+    "profile": "ప్రొఫైల్",
+    "language": "భాష"
+  },
+  "home": {
+    "heroTitle": "ఇన్క్రెడిబుల్ ఇండియా",
+    "heroSubtitle": "వైవిధ్యం, సంస్కృతి మరియు వారసత్వ భూమిని కనుగొనండి",
+    "searchPlaceholder": "గమ్యస్థానాలను శోధించండి...",
+    "search": "శోధన",
+    "popularDestinations": "ప్రసిద్ధ గమ్యస్థానాలు",
+    "regions": "ప్రాంతాలు",
+    "experiences": "అనుభవాలు",
+    "testimonials": "యాత్రికులు ఏమి చెబుతారు",
+    "newsletterTitle": "అప్ ‌ డేట్ ‌ గా ఉండండి",
+    "newsletterSubtitle": "ప్రయాణ టిప్ ‌ లు మరియు ఆఫర్ ‌ ల కోసం సబ్ ‌ స్క్రైబ్ చేయండి",
+    "subscribe": "చందా చేయి",
+    "emailPlaceholder": "మీ ఈ మెయిల్:"
+  },
+  "destination": {
+    "description": "వివరణ",
+    "packages": "ప్యాకేజీలు",
+    "bookNow": "ఇప్పుడే బుక్ చేసుకోండి",
+    "duration": "నిడివి",
+    "price": "ధర",
+    "from": "కె.మురళీధర్ నుంచి..",
+    "map": "స్థానం"
+  },
+  "booking": {
+    "title": "మీ ట్రిప్ ‌ ను బుక్ చేసుకోండి",
+    "step1": "ప్యాకేజీని ఎంచుకోండి",
+    "step2": "ప్రయాణికుల వివరాలు",
+    "step3": "చెల్లింపు",
+    "step4": "నిర్ధారణ",
+    "travelers": "ప్రయాణికులు",
+    "addTraveler": "ట్రావెలర్ ‌ ను జోడించండి",
+    "name": "పూర్తి పేరు ",
+    "email": "Email",
+    "phone": "టెలీఫోను",
+    "travelDate": "ప్రయాణ తేదీ",
+    "mockPayment": "ఎగతాళి చెల్లింపు",
+    "payNow": "ఇప్పుడే చెల్లించండి",
+    "confirmBooking": "బుకింగ్ ‌ ను నిర్ధారించండి",
+    "success": "బుకింగ్ నిర్ధారించబడింది!",
+    "bookingId": "బుకింగ్ ID"
+  },
+  "map": {
+    "title": "మ్యాప్ ‌ లో అన్వేషించండి",
+    "filterByCategory": "కేటగిరీ వారీగా ఫిల్టర్ చేయండి",
+    "allCategories": "అన్ని"
+  },
+  "dashboard": {
+    "myBookings": "నా బుకింగ్ ‌ లు",
+    "profile": "ప్రొఫైల్",
+    "preferredLanguage": "ఇష్టపడే భాష",
+    "save": "భద్రపరచు",
+    "noBookings": "ఇంకా బుకింగ్ ‌ లు లేవు",
+    "status": "స్థితి",
+    "paymentStatus": "చెల్లింపు",
+    "dates": "eetha pandu"
+  },
+  "auth": {
+    "register": "రిజిస్టర్ చేసుకోండి",
+    "login": "లాగిన్",
+    "name": "నామం",
+    "email": "Email",
+    "password": "పాస్‌వర్డ్",
+    "confirmPassword": "పాస్‌వర్డ్‌ని నిర్ధారించండి",
+    "googleLogin": "Googleతో కొనసాగించండి",
+    "alreadyHaveAccount": "ఇప్పటికే ఖాతా ఉందా?",
+    "dontHaveAccount": "\"అకౌంట్ లేదా?\","
+  },
+  "common": {
+    "loading": "లోడింగ్...",
+    "error": "ఏదో సమస్య ఏర్పడింది",
+    "back": "వెనుకకు",
+    "next": "తదుపరి",
+    "submit": "సమర్పించండి",
+    "cancel": "రద్దు"
+  },
+  "categories": {
+    "title": "వర్గం వారీగా అన్వేషించండి",
+    "adventure": "ఎడ్వంచర్",
+    "beaches": "జీర్ణ కర రుగ్మతలు",
+    "heritage": "he",
+    "nature": "ప్రకృతి"
+  },
+  "explore": {
+    "title": "భారతదేశాన్ని అన్వేషించండి",
+    "filterByRegion": "ప్రాంతం వారీగా ఫిల్టర్ చేయండి",
+    "allRegions": "అన్ని ప్రాంతాలు",
+    "states": "స్థితులు",
+    "destinations": "గమ్యస్థానాలు",
+    "viewDetails": "వివరాలను చూడండి",
+    "noDestinations": "గమ్యస్థానాలు ఏవీ కనుగొనబడలేదు",
+    "heroTitle": "భారతదేశాన్ని అన్వేషించండి",
+    "heroSubtitle": "నమ్మశక్యం కాని భారతదేశం యొక్క విభిన్న ప్రాంతాలు మరియు రాష్ట్రాలను కనుగొనండి",
+    "decidedTitle": "ఎక్కడికి వెళ్లాలని ఇప్పటికే నిర్ణయించుకున్నారా?",
+    "decidedDesc": "మీ గమ్యస్థానాన్ని ఎంచుకోండి.",
+    "browseDestinations": "గమ్యస్థానాలను బ్రౌజ్ చేయండి",
+    "notSureTitle": "ఇంకా ఖచ్చితంగా తెలియదా?",
+    "notSureDesc": "మీ కోసం మా వద్ద ప్రసిద్ధ ప్యాకేజీలు ఉన్నాయి.",
+    "viewPackages": "ప్యాకేజీలను చూడండి"
+  },
+  "packages": {
+    "curatedLabel": "మీ కోసం క్యూరేట్ చేయబడింది",
+    "heroTitle": "పాపులర్ టూర్ ప్యాకేజీలు",
+    "heroSub": "భారతదేశం అంతటా చేతితో ఎంచుకున్న ప్రయాణాలు — హిమాలయ శిఖరాల నుండి ఉష్ణమండల తీరాల వరకు",
+    "all": "అన్ని",
+    "retry": "తిరిగి ప్రయత్నించండి",
+    "noPackages": "ఈ వర్గానికి సంబంధించిన ప్యాకేజీలు ఏవీ కనుగొనబడలేదు.",
+    "viewDetails": "వివరాలను చూడండి",
+    "perPerson": "(ఒక్కొక్కరికి)",
+    "highlights": "ముఖ్యాంశాలు",
+    "itinerary": "ప్రయాణం",
+    "included": "ఏమి చేర్చబడ్డాయి",
+    "hotels": "హోటళ్లు",
+    "transport": "రవాణా ఎంపికలు",
+    "nightRate": "రాత్రి",
+    "guideTitle": "ట్రావెల్ గైడ్",
+    "guideAvailable": "ప్రొఫెషనల్ గైడ్ అందుబాటులో ఉంది",
+    "guideLanguages": "భాషలు",
+    "bookThis": "ఈ ప్యాకేజీని బుక్ చేయండి",
+    "from": "నుండి",
+    "error": "ఏదో సమస్య ఏర్పడింది"
+  }
+}

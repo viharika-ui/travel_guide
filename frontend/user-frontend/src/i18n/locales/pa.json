@@ -1,1 +1,135 @@
-{"nav":{"home":"ਘਰ","explore":"ਪੜਚੋਲ","map":"ਨਕਸ਼ਾ","dashboard":"ਡੈਸ਼ਬੋਰਡ","login":"ਲਾਗ ਇਨ","register":"ਰਜਿਸਟਰ","logout":"ਲਾਗ ਆਉਟ","bookings":"ਮੇਰੀਆਂ ਬੁਕਿੰਗਾਂ","profile":"ਪ੍ਰੋਫਾਈਲ","language":"ਭਾਸ਼ਾ"},"home":{"heroTitle":"ਅਦਭੁਤ ਭਾਰਤ","heroSubtitle":"ਵਿਭਿੰਨਤਾ, ਸਭਿਆਚਾਰ ਅਤੇ ਵਿਰਾਸਤ ਦੀ ਧਰਤੀ ਲੱਭੋ","searchPlaceholder":"ਮੰਜ਼ਿਲਾਂ ਖੋਜੋ...","search":"ਖੋਜੋ","popularDestinations":"ਪ੍ਰਸਿੱਧ ਮੰਜ਼ਿਲਾਂ","regions":"ਖੇਤਰ","experiences":"ਅਨੁਭਵ","testimonials":"ਯਾਤਰੀ ਕੀ ਕਹਿੰਦੇ ਹਨ","newsletterTitle":"ਅੱਪਡੇਟ ਰਹੋ","newsletterSubtitle":"ਯਾਤਰਾ ਸੁਝਾਅ ਅਤੇ ਆਫਰਾਂ ਲਈ ਸਬਸਕ੍ਰਾਈਬ ਕਰੋ","subscribe":"ਸਬਸਕ੍ਰਾਈਬ","emailPlaceholder":"ਤੁਹਾਡਾ ਈਮੇਲ"},"explore":{"title":"ਭਾਰਤ ਪੜਚੋਲ ਕਰੋ","filterByRegion":"ਖੇਤਰ ਦੁਆਰਾ ਫਿਲਟਰ","allRegions":"ਸਾਰੇ ਖੇਤਰ","states":"ਰਾਜ","destinations":"ਮੰਜ਼ਿਲਾਂ","viewDetails":"ਵੇਰਵੇ ਦੇਖੋ","noDestinations":"ਕੋਈ ਮੰਜ਼ਿਲ ਨਹੀਂ ਮਿਲੀ"},"destination":{"description":"ਵੇਰਵਾ","packages":"ਪੈਕੇਜ","bookNow":"ਹੁਣ ਬੁਕ ਕਰੋ","duration":"ਅਵਧੀ","price":"ਕੀਮਤ","from":"ਤੋਂ","map":"ਟਿਕਾਣਾ"},"booking":{"title":"ਆਪਣੀ ਯਾਤਰਾ ਬੁਕ ਕਰੋ","step1":"ਪੈਕੇਜ ਚੁਣੋ","step2":"ਯਾਤਰੀ ਵੇਰਵੇ","step3":"ਭੁਗਤਾਨ","step4":"ਪੁਸ਼ਟੀ","travelers":"ਯਾਤਰੀ","addTraveler":"ਯਾਤਰੀ ਜੋੜੋ","name":"ਪੂਰਾ ਨਾਮ","email":"ਈਮੇਲ","phone":"ਫੋਨ","travelDate":"ਯਾਤਰਾ ਤਾਰੀਖ","mockPayment":"ਮੌਕ ਭੁਗਤਾਨ","payNow":"ਹੁਣ ਭੁਗਤਾਨ ਕਰੋ","confirmBooking":"ਬੁਕਿੰਗ ਪੁਸ਼ਟੀ ਕਰੋ","success":"ਬੁਕਿੰਗ ਪੁਸ਼ਟੀ!","bookingId":"ਬੁਕਿੰਗ ਆਈਡੀ"},"map":{"title":"ਨਕਸ਼ੇ 'ਤੇ ਪੜਚੋਲ","filterByCategory":"ਸ਼੍ਰੇਣੀ ਦੁਆਰਾ ਫਿਲਟਰ","allCategories":"ਸਾਰੇ"},"dashboard":{"myBookings":"ਮੇਰੀਆਂ ਬੁਕਿੰਗਾਂ","profile":"ਪ੍ਰੋਫਾਈਲ","preferredLanguage":"ਪਸੰਦੀਦਾ ਭਾਸ਼ਾ","save":"ਸੇਵ ਕਰੋ","noBookings":"ਅਜੇ ਕੋਈ ਬੁਕਿੰਗ ਨਹੀਂ","status":"ਸਥਿਤੀ","paymentStatus":"ਭੁਗਤਾਨ","dates":"ਤਾਰੀਖਾਂ"},"auth":{"register":"ਰਜਿਸਟਰ","login":"ਲਾਗ ਇਨ","name":"ਨਾਮ","email":"ਈਮੇਲ","password":"ਪਾਸਵਰਡ","confirmPassword":"ਪਾਸਵਰਡ ਪੁਸ਼ਟੀ ਕਰੋ","googleLogin":"Google ਨਾਲ ਜਾਰੀ ਰੱਖੋ","alreadyHaveAccount":"ਪਹਿਲਾਂ ਹੀ ਖਾਤਾ ਹੈ?","dontHaveAccount":"ਖਾਤਾ ਨਹੀਂ ਹੈ?"},"common":{"loading":"ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...","error":"ਕੁਝ ਗਲਤ ਹੋ ਗਿਆ","back":"ਵਾਪਸ","next":"ਅੱਗੇ","submit":"ਜਮ੍ਹਾਂ ਕਰੋ","cancel":"ਰੱਦ ਕਰੋ"}}
+{
+  "nav": {
+    "home": "ਮੁੱਖ",
+    "explore": "ਪੜਚੋਲ ਕਰੋ",
+    "map": "ਨਕਸ਼ਾ",
+    "dashboard": "ਡੈਸ਼ਬੋਰਡComment",
+    "login": "ਲਾਗਿਨ",
+    "register": "ਰਜਿਸਟਰ",
+    "logout": "ਲਾੱਗ ਆਊਟ, ਬਾਹਰ ਆਉਣਾ",
+    "bookings": "ਮੇਰੀਆਂ ਬੁਕਿੰਗਾਂ",
+    "profile": "Cathode Ray Tube",
+    "language": "ਭਾਸ਼ਾ"
+  },
+  "home": {
+    "heroTitle": "ਅਵਿਸ਼ਵਾਸ਼ਯੋਗ ਭਾਰਤ",
+    "heroSubtitle": "ਵਿਭਿੰਨਤਾ, ਸਭਿਆਚਾਰ ਅਤੇ ਵਿਰਾਸਤ ਦੀ ਧਰਤੀ ਦੀ ਖੋਜ ਕਰੋ",
+    "searchPlaceholder": "ਟਿਕਾਣੇ ਖੋਜੋ...",
+    "search": "ਖੋਜ",
+    "popularDestinations": "ਪ੍ਰਸਿੱਧ ਮੰਜ਼ਿਲਾਂ",
+    "regions": "ਖੇਤਰsouthkorea. kgm",
+    "experiences": "ਤਜਰਬੇ",
+    "testimonials": "ਕੀ ਕਹਿੰਦੇ ਹਨ ਯਾਤਰੀ",
+    "newsletterTitle": "ਅੱਪਡੇਟ ਰਹੋ",
+    "newsletterSubtitle": "ਯਾਤਰਾ ਸੁਝਾਅ ਅਤੇ ਪੇਸ਼ਕਸ਼ਾਂ ਲਈ ਸਬਸਕ੍ਰਾਈਬ ਕਰੋ",
+    "subscribe": "ਗਾਹਕ ਬਣੋ",
+    "emailPlaceholder": "ਤੁਹਾਡਾ ਈਮੇਲ"
+  },
+  "destination": {
+    "description": "ਵੇਰਵਾ",
+    "packages": "ਪੈਕੇਜ",
+    "bookNow": "ਹੁਣੇ ਬੁੱਕ ਕਰੋ",
+    "duration": "ਅਵਧੀ",
+    "price": "ਕੀਮਤ",
+    "from": "ਵਲੋਂ",
+    "map": "ਸਥਿਤੀ"
+  },
+  "booking": {
+    "title": "ਆਪਣੀ ਯਾਤਰਾ ਬੁੱਕ ਕਰੋ",
+    "step1": "ਖੇਤਰੀ ਭਾਸ਼ਾ ਚੁਣੋ:",
+    "step2": "ਯਾਤਰੀ ਵੇਰਵੇ",
+    "step3": "ਭੁਗਤਾਨ",
+    "step4": "ਪੁਸ਼ਟੀ",
+    "travelers": "ਯਾਤਰੀ",
+    "addTraveler": "ਟਰੈਵਲਰ ਸ਼ਾਮਲ ਕਰੋ",
+    "name": "ਪੂਰਾ ਨਾਮ",
+    "email": "ਈਮੇਲ",
+    "phone": "Telefone",
+    "travelDate": "ਯਾਤਰਾ ਦੀ ਮਿਤੀ",
+    "mockPayment": "ਮੋਕ ਭੁਗਤਾਨ",
+    "payNow": "ਹੁਣੇ ਭੁਗਤਾਨ ਕਰੋ",
+    "confirmBooking": "ਬੁਕਿੰਗ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ",
+    "success": "ਬੁਕਿੰਗ ਦੀ ਪੁਸ਼ਟੀ ਕੀਤੀ ਗਈ!",
+    "bookingId": "ਬੁਕਿੰਗ ਆਈ .ਡੀ"
+  },
+  "map": {
+    "title": "ਨਕਸ਼ੇ 'ਤੇ ਐਕਸਪਲੋਰ ਕਰੋ",
+    "filterByCategory": "ਸ਼੍ਰੇਣੀ ਅਨੁਸਾਰ ਫਿਲਟਰ ਕਰੋ",
+    "allCategories": "ਸਭ"
+  },
+  "dashboard": {
+    "myBookings": "ਮੇਰੀਆਂ ਬੁਕਿੰਗਾਂ",
+    "profile": "Cathode Ray Tube",
+    "preferredLanguage": "ਪਸੰਦੀਦਾ ਭਾਸ਼ਾ",
+    "save": "ਸੇਵ ਕਰੋ",
+    "noBookings": "ਅਜੇ ਤੱਕ ਕੋਈ ਬੁਕਿੰਗ ਨਹੀਂ ਹੈ",
+    "status": "Status",
+    "paymentStatus": "ਭੁਗਤਾਨ",
+    "dates": "ਮਿਤੀਆਂ"
+  },
+  "auth": {
+    "register": "ਰਜਿਸਟਰ",
+    "login": "ਲਾਗਿਨ",
+    "name": "ਨਾਮ",
+    "email": "ਈਮੇਲ",
+    "password": "ਪਾਸਵਰਡ",
+    "confirmPassword": "ਪਾਸਵਰਡ ਪੁਸ਼ਟੀ:",
+    "googleLogin": "ਗੂਗਲ ਨਾਲ ਜਾਰੀ ਰੱਖੋ",
+    "alreadyHaveAccount": "ਪਹਿਲਾਂ ਤੋਂ ਹੀ ਕੋਈ ਅਕਾਊਂਟ ਹੈ?",
+    "dontHaveAccount": "ਕੀ ਤੁਹਾਡਾ ਹਾਲੇ ਤੱਕ ਕੋਈ ਅਕਾਊਂਟ ਨਹੀਂ ਹੈ?"
+  },
+  "common": {
+    "loading": "...ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ",
+    "error": "﻿ਕੁਝ ਗਲਤ ਹੋ ਗਿਆ ਸੀ\"",
+    "back": "ਵਾਪਸ ਜਾਓ",
+    "next": "ਅਗਲਾ",
+    "submit": "ਦਰਜ਼ ਕਰੋ",
+    "cancel": "ਰੱਦ ਕਰੋ"
+  },
+  "categories": {
+    "title": "ਸ਼੍ਰੇਣੀ ਦੁਆਰਾ ਐਕਸਪਲੋਰ ਕਰੋ",
+    "adventure": "ਸਾਹਿਸਕ",
+    "beaches": "ਬੀਚ",
+    "heritage": "ਵਿਰਾਸਤ",
+    "nature": "ਕੁਦਰਤ"
+  },
+  "explore": {
+    "title": "ਭਾਰਤ ਦੀ ਪੜਚੋਲ ਕਰੋ",
+    "filterByRegion": "ਖੇਤਰ ਅਨੁਸਾਰ ਫਿਲਟਰ ਕਰੋ",
+    "allRegions": "ਸਭ ਖੇਤਰ",
+    "states": "ਹਾਲਤ",
+    "destinations": "ਨਿਯਤ",
+    "viewDetails": "ਆਈਟਮ ਵੇਰਵਾ ਵੇਖੋ",
+    "noDestinations": "ਕੋਈ ਮੰਜ਼ਿਲ ਨਹੀਂ ਲੱਭੀ",
+    "heroTitle": "ਭਾਰਤ ਦੀ ਪੜਚੋਲ ਕਰੋ",
+    "heroSubtitle": "ਅਵਿਸ਼ਵਾਸ਼ਯੋਗ ਭਾਰਤ ਦੇ ਵਿਭਿੰਨ ਖੇਤਰਾਂ ਅਤੇ ਰਾਜਾਂ ਦੀ ਖੋਜ ਕਰੋ",
+    "decidedTitle": "ਪਹਿਲਾਂ ਹੀ ਫੈਸਲਾ ਕੀਤਾ ਗਿਆ ਹੈ ਕਿ ਕਿੱਥੇ ਜਾਣਾ ਹੈ?",
+    "decidedDesc": "ਆਪਣੀ ਮੰਜ਼ਿਲ ਦੀ ਚੋਣ ਕਰੋ.",
+    "browseDestinations": "ਮੰਜ਼ਿਲਾਂ ਬ੍ਰਾਊਜ਼ ਕਰੋ",
+    "notSureTitle": "ਅਜੇ ਪੱਕਾ ਨਹੀਂ?",
+    "notSureDesc": "ਸਾਡੇ ਕੋਲ ਤੁਹਾਡੇ ਲਈ ਪ੍ਰਸਿੱਧ ਪੈਕੇਜ ਹਨ.",
+    "viewPackages": "ਪੈਕੇਜ ਵੇਖੋ"
+  },
+  "packages": {
+    "curatedLabel": "ਤੁਹਾਡੇ ਲਈ ਕਿਊਰੇਟ ਕੀਤਾ ਗਿਆ",
+    "heroTitle": "ਪ੍ਰਸਿੱਧ ਟੂਰ ਪੈਕੇਜ",
+    "heroSub": "ਪੂਰੇ ਭਾਰਤ ਵਿੱਚ ਹੱਥਾਂ ਨਾਲ ਚੁਣੀਆਂ ਯਾਤਰਾਵਾਂ — ਹਿਮਾਲਿਆ ਦੀਆਂ ਚੋਟੀਆਂ ਤੋਂ ਲੈ ਕੇ ਖੰਡੀ ਕਿਨਾਰਿਆਂ ਤੱਕ",
+    "all": "ਸਭ",
+    "retry": "ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
+    "noPackages": "ਇਸ ਸ਼੍ਰੇਣੀ ਲਈ ਕੋਈ ਪੈਕੇਜ ਨਹੀਂ ਲੱਭਿਆ ।",
+    "viewDetails": "ਆਈਟਮ ਵੇਰਵਾ ਵੇਖੋ",
+    "perPerson": "ਪ੍ਰਤੀ ਵਿਅਕਤੀ",
+    "highlights": "ਉਚਾਈ",
+    "itinerary": "ਯਾਤਰਾ ਦਾ ਪ੍ਰੋਗਰਾਮ",
+    "included": "ਕੀ ਸ਼ਾਮਲ ਹੈ",
+    "hotels": "ਹੋਟਲ",
+    "transport": "ਟਰਾਂਸਪੋਰਟ ਚੋਣਾਂ",
+    "nightRate": "ਰਾਤ",
+    "guideTitle": "ਯਾਤਰਾ ਗਾਈਡ",
+    "guideAvailable": "ਪੇਸ਼ੇਵਰ ਗਾਈਡ ਉਪਲਬਧ ਹੈ",
+    "guideLanguages": "_ਭਾਸ਼ਾ:",
+    "bookThis": "ਇਹ ਪੈਕੇਜ ਬੁੱਕ ਕਰੋ",
+    "from": "ਵਿੱਚੋਂ",
+    "error": "﻿ਕੁਝ ਗਲਤ ਹੋ ਗਿਆ ਸੀ\""
+  }
+}

@@ -1,1 +1,135 @@
-{"nav":{"home":"ಮುಖಪುಟ","explore":"ಅನ್ವೇಷಿಸಿ","map":"ನಕ್ಷೆ","dashboard":"ಡ್ಯಾಶ್‌ಬೋರ್ಡ್","login":"ಲಾಗಿನ್","register":"ನೋಂದಾಯಿಸಿ","logout":"ಲಾಗ್ ಔಟ್","bookings":"ನನ್ನ ಬುಕಿಂಗ್‌ಗಳು","profile":"ಪ್ರೊಫೈಲ್","language":"ಭಾಷೆ"},"home":{"heroTitle":"ಅದ್ಭುತ ಭಾರತ","heroSubtitle":"ವೈವಿಧ್ಯತೆ, ಸಂಸ್ಕೃತಿ ಮತ್ತು ಪರಂಪರೆಯ ಭೂಮಿಯನ್ನು ಅನ್ವೇಷಿಸಿ","searchPlaceholder":"ಗಮನಸ್ಥಾನಗಳನ್ನು ಹುಡುಕಿ...","search":"ಹುಡುಕಿ","popularDestinations":"ಜನಪ್ರಿಯ ಗಮನಸ್ಥಾನಗಳು","regions":"ಪ್ರದೇಶಗಳು","experiences":"ಅನುಭವಗಳು","testimonials":"ಪ್ರವಾಸಿಗರು ಏನು ಹೇಳುತ್ತಾರೆ","newsletterTitle":"ನವೀಕರಿಸಲಾಗಿದೆ","newsletterSubtitle":"ಪ್ರವಾಸ ಸಲಹೆಗಳು ಮತ್ತು ಆಫರ್‌ಗಳಿಗಾಗಿ ಚಂದಾದಾರರಾಗಿ","subscribe":"ಚಂದಾದಾರರಾಗಿ","emailPlaceholder":"ನಿಮ್ಮ ಇಮೇಲ್"},"explore":{"title":"ಭಾರತವನ್ನು ಅನ್ವೇಷಿಸಿ","filterByRegion":"ಪ್ರದೇಶದಿಂದ ಫಿಲ್ಟರ್","allRegions":"ಎಲ್ಲಾ ಪ್ರದೇಶಗಳು","states":"ರಾಜ್ಯಗಳು","destinations":"ಗಮನಸ್ಥಾನಗಳು","viewDetails":"ವಿವರಗಳನ್ನು ನೋಡಿ","noDestinations":"ಗಮನಸ್ಥಾನಗಳು ಕಂಡುಬಂದಿಲ್ಲ"},"destination":{"description":"ವಿವರಣೆ","packages":"ಪ್ಯಾಕೇಜ್‌ಗಳು","bookNow":"ಈಗ ಬುಕ್ ಮಾಡಿ","duration":"ಅವಧಿ","price":"ಬೆಲೆ","from":"ನಿಂದ","map":"ಸ್ಥಳ"},"booking":{"title":"ನಿಮ್ಮ ಟ್ರಿಪ್ ಬುಕ್ ಮಾಡಿ","step1":"ಪ್ಯಾಕೇಜ್ ಆಯ್ಕೆಮಾಡಿ","step2":"ಪ್ರವಾಸಿ ವಿವರಗಳು","step3":"ಪಾವತಿ","step4":"ದೃಢೀಕರಣ","travelers":"ಪ್ರವಾಸಿಗರು","addTraveler":"ಪ್ರವಾಸಿ ಸೇರಿಸಿ","name":"ಪೂರ್ಣ ಹೆಸರು","email":"ಇಮೇಲ್","phone":"ಫೋನ್","travelDate":"ಪ್ರವಾಸ ದಿನಾಂಕ","mockPayment":"ಮಾಕ್ ಪಾವತಿ","payNow":"ಈಗ ಪಾವತಿಸಿ","confirmBooking":"ಬುಕಿಂಗ್ ದೃಢೀಕರಿಸಿ","success":"ಬುಕಿಂಗ್ ದೃಢೀಕರಿಸಲಾಗಿದೆ!","bookingId":"ಬುಕಿಂಗ್ ID"},"map":{"title":"ನಕ್ಷೆಯಲ್ಲಿ ಅನ್ವೇಷಿಸಿ","filterByCategory":"ವರ್ಗದಿಂದ ಫಿಲ್ಟರ್","allCategories":"ಎಲ್ಲಾ"},"dashboard":{"myBookings":"ನನ್ನ ಬುಕಿಂಗ್‌ಗಳು","profile":"ಪ್ರೊಫೈಲ್","preferredLanguage":"ಇಷ್ಟದ ಭಾಷೆ","save":"ಉಳಿಸಿ","noBookings":"ಇನ್ನೂ ಬುಕಿಂಗ್‌ಗಳಿಲ್ಲ","status":"ಸ್ಥಿತಿ","paymentStatus":"ಪಾವತಿ","dates":"ದಿನಾಂಕಗಳು"},"auth":{"register":"ನೋಂದಾಯಿಸಿ","login":"ಲಾಗಿನ್","name":"ಹೆಸರು","email":"ಇಮೇಲ್","password":"ಪಾಸ್‌ವರ್ಡ್","confirmPassword":"ಪಾಸ್‌ವರ್ಡ್ ದೃಢೀಕರಿಸಿ","googleLogin":"Google ನೊಂದಿಗೆ ಮುಂದುವರಿಸಿ","alreadyHaveAccount":"ಈಗಾಗಲೇ ಖಾತೆ ಇದೆಯೇ?","dontHaveAccount":"ಖಾತೆ ಇಲ್ಲವೇ?"},"common":{"loading":"ಲೋಡ್ ಆಗುತ್ತಿದೆ...","error":"ಏನೋ ತಪ್ಪಾಗಿದೆ","back":"ಹಿಂದೆ","next":"ಮುಂದೆ","submit":"ಸಲ್ಲಿಸಿ","cancel":"ರದ್ದು"}}
+{
+  "nav": {
+    "home": "ಹೋ. E",
+    "explore": "ಅನ್ವೇಷಿಸಿ",
+    "map": "ನಕ್ಷೆ",
+    "dashboard": "ಡಾಶ್ ಬೋರ್ಡ್ ",
+    "login": "ಲಾಗಿನ್",
+    "register": "ನೋಂದಾಯಿಸು",
+    "logout": "ನಿರ್ಗಮಿಸು",
+    "bookings": "ನನ್ನ ಬುಕಿಂಗ್‌ಗಳು",
+    "profile": "ಪ್ರೊಫೈಲ್",
+    "language": "ಭಾಷೆ (ಕನ್ನಡ)"
+  },
+  "home": {
+    "heroTitle": "ನಂಬಲಾಗದ ಭಾರತ",
+    "heroSubtitle": "ವೈವಿಧ್ಯತೆ, ಸಂಸ್ಕೃತಿ ಮತ್ತು ಪರಂಪರೆಯ ಭೂಮಿಯನ್ನು ಅನ್ವೇಷಿಸಿ",
+    "searchPlaceholder": "ಗಮ್ಯಸ್ಥಾನಗಳನ್ನು ಹುಡುಕಿ...",
+    "search": "ಶೋಧ",
+    "popularDestinations": "ಜನಪ್ರಿಯ ಗಮ್ಯಸ್ಥಾನಗಳು",
+    "regions": "ಪ್ರದೇಶಗಳು",
+    "experiences": "ಅನುಭವಗಳು",
+    "testimonials": "ಪ್ರಯಾಣಿಕರು ಏನು ಹೇಳುತ್ತಾರೆ",
+    "newsletterTitle": "ಅಪ್‌ಡೇಟ್ ಆಗಿರಿ",
+    "newsletterSubtitle": "ಪ್ರಯಾಣದ ಟಿಪ್ಸ್ ಮತ್ತು ಆಫರ್‌ಗಳಿಗೆ ಚಂದಾದಾರರಾಗಿ",
+    "subscribe": "ಚಂದಾದಾರರಾಗಿ",
+    "emailPlaceholder": "ನಿಮ್ಮ ಇಮೇಲ್"
+  },
+  "destination": {
+    "description": "ವಿವರಣೆ",
+    "packages": "ಪ್ಯಾಕೇಜುಗಳು",
+    "bookNow": "ಈಗಲೇ ಬುಕ್ ಮಾಡಿ",
+    "duration": "ಅವಧಿ",
+    "price": "ಬೆಲೆ",
+    "from": "ಇದರಿಂದ",
+    "map": "ಸ್ಥ‍ಳ"
+  },
+  "booking": {
+    "title": "ನಿಮ್ಮ ಟ್ರಿಪ್ ಅನ್ನು ಕಾದಿರಿಸಿ",
+    "step1": "ಪ್ಯಾಕೇಜ್ ಆಯ್ಕೆಮಾಡಿ",
+    "step2": "ಪ್ರಯಾಣಿಕರ ವಿವರಗಳು",
+    "step3": "ಪಾವತಿ",
+    "step4": "à²à²¡à²¤à²à³à²¶à²µà³ à²¸à³à²·à³à²à²¿à²¯à²¾à²à²¿à²¦à³. @ info",
+    "travelers": "ಪ್ರಯಾಣಿಕರು",
+    "addTraveler": "ಪ್ರಯಾಣಿಕರನ್ನು ಸೇರಿಸಿ",
+    "name": "ಪೂರ್ಣ ಹೆಸರು:",
+    "email": "ಇಮೇಲ್",
+    "phone": "ದೂರವಾಣಿ",
+    "travelDate": "ಪ್ರಯಾಣದ ದಿನಾಂಕ",
+    "mockPayment": "ಮಾಕ್ ಪಾವತಿ",
+    "payNow": "ಈಗ ಪಾವತಿಸಿ",
+    "confirmBooking": "ಬುಕಿಂಗ್ ಅನ್ನು ದೃಢೀಕರಿಸಿ",
+    "success": "ಬುಕಿಂಗ್ ಖಚಿತಪಡಿಸಲಾಗಿದೆ!",
+    "bookingId": "ಬುಕಿಂಗ್ ID"
+  },
+  "map": {
+    "title": "ನಕ್ಷೆಯಲ್ಲಿ ಅನ್ವೇಷಿಸಿ",
+    "filterByCategory": "ವರ್ಗದ ಪ್ರಕಾರ ಫಿಲ್ಟರ್ ಮಾಡಿ",
+    "allCategories": "ಎಲ್ಲ"
+  },
+  "dashboard": {
+    "myBookings": "ನನ್ನ ಬುಕಿಂಗ್‌ಗಳು",
+    "profile": "ಪ್ರೊಫೈಲ್",
+    "preferredLanguage": "ನಿಮ್ಮ ಆದ್ಯತೆಯ ಭಾಷೆ",
+    "save": "ಉಳಿಸಿ",
+    "noBookings": "ಇನ್ನೂ ಯಾವುದೇ ಬುಕಿಂಗ್‌ಗಳಿಲ್ಲ",
+    "status": "ಸ್ಥಿತಿ",
+    "paymentStatus": "ಪಾವತಿ",
+    "dates": "ದಿನಾಂಕಗಳು"
+  },
+  "auth": {
+    "register": "ನೋಂದಾಯಿಸು",
+    "login": "ಲಾಗಿನ್",
+    "name": "ಹೆಸರು",
+    "email": "ಇಮೇಲ್",
+    "password": "ಪಾಸ್‌ವರ್ಡ್",
+    "confirmPassword": "ಪಾಸ್‌ವರ್ಡ್ ದೃಢೀಕರಿಸಿ",
+    "googleLogin": "Google ನೊಂದಿಗೆ ಮುಂದುವರಿಸಿ",
+    "alreadyHaveAccount": "ಈಗಾಗಲೇ ಒಂದು ಖಾತೆಯನ್ನು ಹೊಂದಿದ್ದೀರಾ?",
+    "dontHaveAccount": "ಖಾತೆಯನ್ನು ಹೊಂದಿಲ್ಲವೇ?"
+  },
+  "common": {
+    "loading": "ಲೋಡ್ ಆಗುತ್ತಿದೆ...",
+    "error": "ಏನೋ ತಪ್ಪಾಗಿದೆ",
+    "back": "ಹಿಂದೆ",
+    "next": "ಮುಂದಿನ",
+    "submit": "ಸಲ್ಲಿಸಿ",
+    "cancel": "ರದ್ದು"
+  },
+  "categories": {
+    "title": "ವರ್ಗದ ಪ್ರಕಾರ ಅನ್ವೇಷಿಸಿ",
+    "adventure": "ಸಾಹಸ",
+    "beaches": "ಕಡಲತೀರಗಳು",
+    "heritage": "ಹೆರಿಟೇಜ್",
+    "nature": "ನಿಸರ್ಗ"
+  },
+  "explore": {
+    "title": "ಭಾರತವನ್ನು ಅನ್ವೇಷಿಸಿ",
+    "filterByRegion": "ಪ್ರದೇಶದ ಪ್ರಕಾರ ಫಿಲ್ಟರ್ ಮಾಡಿ",
+    "allRegions": "ಎಲ್ಲಾ ಪ್ರದೇಶಗಳು",
+    "states": "ರಾಜ್ಯಗಳು",
+    "destinations": "ತಲುಪಬೇಕಾದ ಸ್ಥಳಗಳು",
+    "viewDetails": "ವಿವರಗಳನ್ನು ನೋಡಿ",
+    "noDestinations": "ಯಾವುದೇ ತಲುಪಬೇಕಾದ ಸ್ಥಳಗಳು ಕಂಡುಬಂದಿಲ್ಲ",
+    "heroTitle": "ಭಾರತವನ್ನು ಅನ್ವೇಷಿಸಿ",
+    "heroSubtitle": "ನಂಬಲಾಗದ ಭಾರತದ ವೈವಿಧ್ಯಮಯ ಪ್ರದೇಶಗಳು ಮತ್ತು ರಾಜ್ಯಗಳನ್ನು ಅನ್ವೇಷಿಸಿ",
+    "decidedTitle": "ಎಲ್ಲಿಗೆ ಹೋಗಬೇಕೆಂದು ಈಗಾಗಲೇ ನಿರ್ಧರಿಸಿದ್ದೀರಾ?",
+    "decidedDesc": "ನಿಮ್ಮ ತಲುಪಬೇಕಾದ ಸ್ಥಳವನ್ನು ಆರಿಸಿ.",
+    "browseDestinations": "ತಲುಪಬೇಕಾದ ಸ್ಥಳಗಳನ್ನು ಬ್ರೌಸ್ ಮಾಡಿ",
+    "notSureTitle": "ಇನ್ನೂ ಖಚಿತವಾಗಿಲ್ಲವೇ?",
+    "notSureDesc": "ನಿಮಗಾಗಿ ನಾವು ಜನಪ್ರಿಯ ಪ್ಯಾಕೇಜ್‌ಗಳನ್ನು ಹೊಂದಿದ್ದೇವೆ.",
+    "viewPackages": "ಪ್ಯಾಕೇಜ್‌ಗಳನ್ನು ವೀಕ್ಷಿಸಿ"
+  },
+  "packages": {
+    "curatedLabel": "ನಿಮಗಾಗಿ ಕ್ಯುರೇಟ್ ಮಾಡಲಾಗಿದೆ",
+    "heroTitle": "ಜನಪ್ರಿಯ ಟೂರ್ ಪ್ಯಾಕೇಜ್‌ಗಳು",
+    "heroSub": "ಭಾರತದಾದ್ಯಂತ — ಹಿಮಾಲಯದ ಶಿಖರಗಳಿಂದ ಉಷ್ಣವಲಯದ ತೀರಗಳವರೆಗೆ ಕೈಯಿಂದ ಆಯ್ಕೆ ಮಾಡಿದ ಪ್ರಯಾಣಗಳು",
+    "all": "ಎಲ್ಲ",
+    "retry": "ಪುನಃ ಪ್ರಯತ್ನಿಸು",
+    "noPackages": "ಈ ವರ್ಗಕ್ಕೆ ಯಾವುದೇ ಪ್ಯಾಕೇಜ್‌ಗಳು ಕಂಡುಬಂದಿಲ್ಲ.",
+    "viewDetails": "ವಿವರಗಳನ್ನು ನೋಡಿ",
+    "perPerson": "ಪ್ರತಿ ವ್ಯಕ್ತಿಗೆ",
+    "highlights": "ಮುಖ್ಯಾಂಶಗಳು ",
+    "itinerary": "ಪ್ರಯಾಣ",
+    "included": "ಏನನ್ನು ಸೇರಿಸಲಾಗಿದೆ",
+    "hotels": "ಹೋಟೆಲ್‌ಗಳು",
+    "transport": "ಸಾರಿಗೆ ಆಯ್ಕೆಗಳು",
+    "nightRate": "ರಾತ್ರಿ",
+    "guideTitle": "ಪ್ರಯಾಣ ಮಾರ್ಗದರ್ಶಿ",
+    "guideAvailable": "ವೃತ್ತಿಪರ ಮಾರ್ಗದರ್ಶಿ ಲಭ್ಯವಿದೆ",
+    "guideLanguages": "ಭಾಷೆಗಳುName",
+    "bookThis": "ಈ ಪ್ಯಾಕೇಜ್ ಅನ್ನು ಕಾದಿರಿಸಿ",
+    "from": "ಪ್ರಾತಿನಿಧ್ಯ",
+    "error": "ಏನೋ ತಪ್ಪಾಗಿದೆ"
+  }
+}

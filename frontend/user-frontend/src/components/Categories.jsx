@@ -1,12 +1,20 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./Categories.css";
 
 const Categories = () => {
-  const items = ["Adventure", "Beaches", "Heritage", "Nature"];
+  const { t } = useTranslation();
+
+  const items = [
+    t('categories.adventure'),
+    t('categories.beaches'),
+    t('categories.heritage'),
+    t('categories.nature'),
+  ];
 
   return (
     <div className="categories">
-      <h2>Explore by Category</h2>
+      <h2>{t('categories.title')}</h2>
 
       <div className="cat-list">
         {items.map((c, i) => (

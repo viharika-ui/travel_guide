@@ -1,1 +1,135 @@
-{"nav":{"home":"হোম","explore":"অন্বেষণ","map":"মানচিত্র","dashboard":"ড্যাশবোর্ড","login":"লগইন","register":"নিবন্ধন","logout":"লগআউট","bookings":"আমার বুকিং","profile":"প্রোফাইল","language":"ভাষা"},"home":{"heroTitle":"অবিশ্বাস্য ভারত","heroSubtitle":"বৈচিত্র্য, সংস্কৃতি ও ঐতিহ্যের দেশ আবিষ্কার করুন","searchPlaceholder":"গন্তব্য খুঁজুন...","search":"খুঁজুন","popularDestinations":"জনপ্রিয় গন্তব্য","regions":"অঞ্চল","experiences":"অনুভূতি","testimonials":"ভ্রমণকারীরা কী বলেছেন","newsletterTitle":"আপডেট থাকুন","newsletterSubtitle":"ভ্রমণ টিপস এবং অফারের জন্য সাবস্ক্রাইব করুন","subscribe":"সাবস্ক্রাইব","emailPlaceholder":"আপনার ইমেইল"},"explore":{"title":"ভারত অন্বেষণ","filterByRegion":"অঞ্চল দ্বারা ফিল্টার","allRegions":"সব অঞ্চল","states":"রাজ্য","destinations":"গন্তব্য","viewDetails":"বিবরণ দেখুন","noDestinations":"কোন গন্তব্য পাওয়া যায়নি"},"destination":{"description":"বিবরণ","packages":"প্যাকেজ","bookNow":"এখন বুক করুন","duration":"সময়","price":"দাম","from":"থেকে","map":"অবস্থান"},"booking":{"title":"আপনার ট্রিপ বুক করুন","step1":"প্যাকেজ নির্বাচন করুন","step2":"ভ্রমণকারীর বিবরণ","step3":"পেমেন্ট","step4":"নিশ্চিতকরণ","travelers":"ভ্রমণকারী","addTraveler":"ভ্রমণকারী যোগ করুন","name":"পুরো নাম","email":"ইমেইল","phone":"ফোন","travelDate":"ভ্রমণের তারিখ","mockPayment":"মক পেমেন্ট","payNow":"এখন পে করুন","confirmBooking":"বুকিং নিশ্চিত করুন","success":"বুকিং নিশ্চিত!","bookingId":"বুকিং আইডি"},"map":{"title":"মানচিত্রে অন্বেষণ","filterByCategory":"ক্যাটাগরি দ্বারা ফিল্টার","allCategories":"সব"},"dashboard":{"myBookings":"আমার বুকিং","profile":"প্রোফাইল","preferredLanguage":"পছন্দের ভাষা","save":"সেভ","noBookings":"এখনও কোন বুকিং নেই","status":"স্থিতি","paymentStatus":"পেমেন্ট","dates":"তারিখ"},"auth":{"register":"নিবন্ধন","login":"লগইন","name":"নাম","email":"ইমেইল","password":"পাসওয়ার্ড","confirmPassword":"পাসওয়ার্ড নিশ্চিত করুন","googleLogin":"Google দিয়ে চালিয়ে যান","alreadyHaveAccount":"ইতিমধ্যে অ্যাকাউন্ট আছে?","dontHaveAccount":"অ্যাকাউন্ট নেই?"},"common":{"loading":"লোড হচ্ছে...","error":"কিছু ভুল হয়েছে","back":"পিছনে","next":"পরবর্তী","submit":"জমা দিন","cancel":"বাতিল"}}
+{
+  "nav": {
+    "home": "প্রধান পৃষ্ঠা",
+    "explore": "অন্বেষণ করুন",
+    "map": "মানচিত্র",
+    "dashboard": "ড্যাশবোর্ড",
+    "login": "লগ ইন করুন",
+    "register": "রেজিস্টার",
+    "logout": "লগআউট",
+    "bookings": "আমার বুকিং",
+    "profile": "প্রোফাইল",
+    "language": "ভাষা"
+  },
+  "home": {
+    "heroTitle": "অবিশ্বাস্য ভারত",
+    "heroSubtitle": "বৈচিত্র্য, সংস্কৃতি এবং ঐতিহ্যের ভূমি আবিষ্কার করুন",
+    "searchPlaceholder": "গন্তব্য অনুসন্ধান",
+    "search": "খোঁজ",
+    "popularDestinations": "জনপ্রিয় গন্তব্যস্থলগুলি",
+    "regions": "অঞ্চলসমূহ",
+    "experiences": "অভিজ্ঞতা:",
+    "testimonials": "ভ্রমণকারীরা কি বলে",
+    "newsletterTitle": "আপডেটেড থাকুন",
+    "newsletterSubtitle": "ভ্রমণের পরামর্শ এবং অফারের জন্য সাবস্ক্রাইব করুন",
+    "subscribe": "সদস্যতা",
+    "emailPlaceholder": "আপানার ইমেইল"
+  },
+  "destination": {
+    "description": "বিবরণ",
+    "packages": "প্যাকেজগুলি",
+    "bookNow": "এখনি বুকিং করুন",
+    "duration": "সময়কাল",
+    "price": "দাম",
+    "from": "থেকে",
+    "map": "অবস্থান"
+  },
+  "booking": {
+    "title": "আপনার ট্রিপ বুক করুন",
+    "step1": "Selecteer pakket",
+    "step2": "ভ্রমণকারীর বিবরণ",
+    "step3": "পেমেন্ট",
+    "step4": "নিশ্চিতকরণ",
+    "travelers": "যাত্রী",
+    "addTraveler": "ভ্রমণকারী যোগ করুন",
+    "name": "সম্পূর্ণ নাম",
+    "email": "ইমেল",
+    "phone": "ফোন",
+    "travelDate": "ভ্রমণের তারিখ",
+    "mockPayment": "মক পেমেন্ট",
+    "payNow": "এখনি মূল্য পরিশোধ করুন",
+    "confirmBooking": "বুকিং নিশ্চিত করুন",
+    "success": "বুকিং নিশ্চিত হয়েছে!",
+    "bookingId": "বুকিং আইডি"
+  },
+  "map": {
+    "title": "মানচিত্রে অন্বেষণ করুন",
+    "filterByCategory": "বিভাগ অনুসারে ফিল্টার করুন",
+    "allCategories": "সব"
+  },
+  "dashboard": {
+    "myBookings": "আমার বুকিং",
+    "profile": "প্রোফাইল",
+    "preferredLanguage": "পছন্দের ভাষা",
+    "save": "সংরক্ষণ করুন",
+    "noBookings": "এখনও কোনও বুকিং হয়নি",
+    "status": "স্ট্যাটাস",
+    "paymentStatus": "পেমেন্ট",
+    "dates": "খেজুর"
+  },
+  "auth": {
+    "register": "রেজিস্টার",
+    "login": "লগ ইন করুন",
+    "name": "নাম",
+    "email": "ইমেল",
+    "password": "পাসওয়ার্ড",
+    "confirmPassword": "পাসওয়ার্ড নিশ্চিত করুন",
+    "googleLogin": "GOOGLE-এর সাথে চালিয়ে যান",
+    "alreadyHaveAccount": "আগে থেকেই একটি অ্যাকাউন্ট আছে কি?",
+    "dontHaveAccount": "কোন অ্যাকাউন্ট নেই? "
+  },
+  "common": {
+    "loading": "বোঝাই...",
+    "error": "কিছু একটা সমস্যা হয়েছিল",
+    "back": "পিছনে",
+    "next": "পরবর্তী",
+    "submit": "জমা দিন",
+    "cancel": "বাতিল করুন"
+  },
+  "categories": {
+    "title": "বিভাগ অনুসারে অন্বেষণ করুন",
+    "adventure": "অ্যাডভেঞ্চার",
+    "beaches": "সৈকত",
+    "heritage": "ঐতিহ্য",
+    "nature": "প্রকৃতি"
+  },
+  "explore": {
+    "title": "ভারত অন্বেষণ করুন",
+    "filterByRegion": "অঞ্চল অনুযায়ী ফিল্টার করুন",
+    "allRegions": "সমস্ত অঞ্চল",
+    "states": "রাজ্য",
+    "destinations": "গন্তব্যগুলি",
+    "viewDetails": "বিস্তারিত দেখুন",
+    "noDestinations": "কোনও গন্তব্যস্থল পাওয়া যায়নি",
+    "heroTitle": "ভারত অন্বেষণ করুন",
+    "heroSubtitle": "অবিশ্বাস্য ভারতের বিভিন্ন অঞ্চল এবং রাজ্যগুলি আবিষ্কার করুন",
+    "decidedTitle": "ইতিমধ্যে সিদ্ধান্ত নিয়েছেন কোথায় যাবেন?",
+    "decidedDesc": "আপনার গন্তব্য বেছে নিন ।",
+    "browseDestinations": "গন্তব্যগুলি ব্রাউজ করুন",
+    "notSureTitle": "এখনও সুনিশ্চিত নই",
+    "notSureDesc": "আমাদের কাছে আপনার জন্য জনপ্রিয় প্যাকেজ রয়েছে ।",
+    "viewPackages": "প্যাকেজগুলি দেখুন"
+  },
+  "packages": {
+    "curatedLabel": "আপনার জন্য সুসজ্জিত",
+    "heroTitle": "জনপ্রিয় ট্যুর প্যাকেজ",
+    "heroSub": "ভারত জুড়ে হস্তনির্মিত ভ্রমণ — হিমালয় পর্বতমালা থেকে গ্রীষ্মমন্ডলীয় তীরে",
+    "all": "সব",
+    "retry": "পুনরায় চেষ্টা করুন",
+    "noPackages": "এই বিভাগের জন্য কোনও প্যাকেজ পাওয়া যায়নি ।",
+    "viewDetails": "বিস্তারিত দেখুন",
+    "perPerson": "ব্যক্তি প্রতি",
+    "highlights": "হাইলাইট",
+    "itinerary": "ভ্রমণপথ",
+    "included": "যা অন্তর্ভুক্ত রয়েছে",
+    "hotels": "হোটেলগুলি",
+    "transport": "পরিবহন বিকল্প",
+    "nightRate": "রাত",
+    "guideTitle": "ভ্রমণ নির্দেশিকা",
+    "guideAvailable": "প্রফেশনাল গাইড উপলভ্য",
+    "guideLanguages": "ভাষা",
+    "bookThis": "এই প্যাকেজটি বুক করুন",
+    "from": "থেকে",
+    "error": "কিছু একটা সমস্যা হয়েছিল"
+  }
+}

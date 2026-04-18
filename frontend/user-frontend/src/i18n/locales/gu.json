@@ -1,1 +1,135 @@
-{"nav":{"home":"હોમ","explore":"અન્વેષણ","map":"નકશો","dashboard":"ડેશબોર્ડ","login":"લોગઇન","register":"નોંધણી","logout":"લોગઆઉટ","bookings":"મારી બુકિંગ","profile":"પ્રોફાઇલ","language":"ભાષા"},"home":{"heroTitle":"અદ્ભુત ભારત","heroSubtitle":"વિવિધતા, સંસ્કૃતિ અને વારસાની ભૂમિ શોધો","searchPlaceholder":"ગંતવ્ય શોધો...","search":"શોધો","popularDestinations":"લોકપ્રિય ગંતવ્યો","regions":"પ્રદેશો","experiences":"અનુભવો","testimonials":"યાત્રીઓ શું કહે છે","newsletterTitle":"અપડેટ રહો","newsletterSubtitle":"યાત્રા ટિપ્સ અને ઓફર માટે સબ્સ્ક્રાઇબ કરો","subscribe":"સબ્સ્ક્રાઇબ","emailPlaceholder":"તમારો ઈમેલ"},"explore":{"title":"ભારત અન્વેષણ કરો","filterByRegion":"પ્રદેશ દ્વારા ફિલ્ટર","allRegions":"બધા પ્રદેશો","states":"રાજ્યો","destinations":"ગંતવ્યો","viewDetails":"વિગતો જુઓ","noDestinations":"કોઈ ગંતવ્ય મળ્યું નહીં"},"destination":{"description":"વર્ણન","packages":"પેકેજ","bookNow":"હવે બુક કરો","duration":"અવધિ","price":"કિંમત","from":"થી","map":"સ્થાન"},"booking":{"title":"તમારી ટ્રિપ બુક કરો","step1":"પેકેજ પસંદ કરો","step2":"યાત્રી વિગતો","step3":"ચુકવણી","step4":"પુષ્ટિ","travelers":"યાત્રીઓ","addTraveler":"યાત્રી ઉમેરો","name":"પૂર્ણ નામ","email":"ઈમેલ","phone":"ફોન","travelDate":"યાત્રા તારીખ","mockPayment":"મોક ચુકવણી","payNow":"હવે ચૂકવો","confirmBooking":"બુકિંગ પુષ્ટિ કરો","success":"બુકિંગ પુષ્ટિ!","bookingId":"બુકિંગ આઈડી"},"map":{"title":"નકશા પર અન્વેષણ","filterByCategory":"શ્રેણી દ્વારા ફિલ્ટર","allCategories":"બધા"},"dashboard":{"myBookings":"મારી બુકિંગ","profile":"પ્રોફાઇલ","preferredLanguage":"પસંદીદા ભાષા","save":"સાચવો","noBookings":"હજુ બુકિંગ નથી","status":"સ્થિતિ","paymentStatus":"ચુકવણી","dates":"તારીખો"},"auth":{"register":"નોંધણી","login":"લોગઇન","name":"નામ","email":"ઈમેલ","password":"પાસવર્ડ","confirmPassword":"પાસવર્ડ પુષ્ટિ કરો","googleLogin":"Google સાથે ચાલુ રાખો","alreadyHaveAccount":"પહેલેથી એકાઉન્ટ છે?","dontHaveAccount":"એકાઉન્ટ નથી?"},"common":{"loading":"લોડ થઈ રહ્યું છે...","error":"કંઈક ખોટું થયું","back":"પાછા","next":"આગળ","submit":"જમા કરો","cancel":"રદ કરો"}}
+{
+  "nav": {
+    "home": "હોમ",
+    "explore": "વધારે",
+    "map": "નકશો",
+    "dashboard": "ડેશબોર્ડ",
+    "login": "લોગીન",
+    "register": "રજીસ્ટર",
+    "logout": "લોગ આઉટ",
+    "bookings": "મારી બુકિંગ્સ",
+    "profile": "પ્રોફાઇલ",
+    "language": "ભાષા "
+  },
+  "home": {
+    "heroTitle": "અતુલ્ય ભારત",
+    "heroSubtitle": "વિવિધતા, સંસ્કૃતિ અને વારસાની ભૂમિ શોધો",
+    "searchPlaceholder": "સ્થળો શોધો...",
+    "search": "શોધ",
+    "popularDestinations": "લોકપ્રિય સ્થળો",
+    "regions": "વિસ્તારોsouthkorea. kgm",
+    "experiences": "અનુભવો",
+    "testimonials": "મુસાફરો શું કહે છે",
+    "newsletterTitle": "અપડેટ રહો",
+    "newsletterSubtitle": "મુસાફરીની ટિપ્સ અને ઓફર્સ માટે સબ્સ્ક્રાઇબ કરો",
+    "subscribe": "સબ્સ્ક્રાઇબ કરો",
+    "emailPlaceholder": " તમારું ઇમેઇલ"
+  },
+  "destination": {
+    "description": "વર્ણન",
+    "packages": "પૅકૅજ",
+    "bookNow": "બુકિંગ અત્યાર થી જ કરાવી લેજો. ",
+    "duration": "સમયગાળો",
+    "price": "કિંમત ",
+    "from": "થી",
+    "map": "સ્થળ"
+  },
+  "booking": {
+    "title": "તમારી સફર બુક કરો",
+    "step1": "પેકેજ ને પસંદ કરો",
+    "step2": "મુસાફરોની વિગતો",
+    "step3": "ચૂકવણી",
+    "step4": "ખાતરી",
+    "travelers": "મુસાફરો",
+    "addTraveler": "ટ્રાવેલર ઉમેરો",
+    "name": "Full Name",
+    "email": "ઇમેઇલ",
+    "phone": "ફોન",
+    "travelDate": "મુસાફરીની તારીખ",
+    "mockPayment": "મોક પેમેન્ટ",
+    "payNow": "હમણાં ચૂકવણી કરો",
+    "confirmBooking": "બુકિંગની પુષ્ટિ કરો",
+    "success": "બુકિંગ પુષ્ટિ થયેલ છે!",
+    "bookingId": "બુકિંગ ID"
+  },
+  "map": {
+    "title": "નકશા પર અન્વેષણ કરો",
+    "filterByCategory": "કેટેગરી પ્રમાણે ફિલ્ટર કરો",
+    "allCategories": "તમામ"
+  },
+  "dashboard": {
+    "myBookings": "મારી બુકિંગ્સ",
+    "profile": "પ્રોફાઇલ",
+    "preferredLanguage": "પ્રાધાન્યવાળી ભાષા",
+    "save": "સેવ કરો",
+    "noBookings": "હજી સુધી કોઈ બુકિંગ નથી",
+    "status": "સ્ટેટ્સ",
+    "paymentStatus": "ચૂકવણી",
+    "dates": "તારીખો"
+  },
+  "auth": {
+    "register": "રજીસ્ટર",
+    "login": "લોગીન",
+    "name": "નામ",
+    "email": "ઇમેઇલ",
+    "password": "પાસવર્ડ",
+    "confirmPassword": "પાસવર્ડ",
+    "googleLogin": "Google સાથે આગળ વધો",
+    "alreadyHaveAccount": "પહેલેથી જ એકાઉન્ટ છે?",
+    "dontHaveAccount": "શું હજી સુધી કોઈ એકાઉન્ટ નથી? "
+  },
+  "common": {
+    "loading": "લોડ થઈ રહ્યું છે",
+    "error": "કંઈક ખોટું થયું",
+    "back": "પાછળ",
+    "next": "આગળ",
+    "submit": "સબમિટ કરો ",
+    "cancel": "રદ કરો"
+  },
+  "categories": {
+    "title": "કેટેગરી દ્વારા અન્વેષણ કરો",
+    "adventure": "રોમાંચક",
+    "beaches": "દરિયાકિનારા",
+    "heritage": "varso",
+    "nature": "કુદરત"
+  },
+  "explore": {
+    "title": "ભારતનું અન્વેષણ કરો",
+    "filterByRegion": "પ્રદેશ દ્વારા ફિલ્ટર કરો",
+    "allRegions": "બધા પ્રદેશો",
+    "states": "રજવાડાં ",
+    "destinations": "સ્થળો",
+    "viewDetails": "ક્ષતિ વિગતો",
+    "noDestinations": "કોઈ ગંતવ્યો મળ્યા નથી",
+    "heroTitle": "ભારતનું અન્વેષણ કરો",
+    "heroSubtitle": "અકલ્પનીય ભારતના વિવિધ પ્રદેશો અને રાજ્યોને શોધો",
+    "decidedTitle": "પહેલેથી જ નક્કી કર્યું છે કે ક્યાં જવું છે?",
+    "decidedDesc": "તમારું ડેસ્ટિનેશન પસંદ કરો.",
+    "browseDestinations": "સ્થળો બ્રાઉઝ કરો",
+    "notSureTitle": "હજુ સુધી ખાતરી નથી?",
+    "notSureDesc": "અમારી પાસે તમારા માટે લોકપ્રિય પેકેજો છે.",
+    "viewPackages": "પેકેજો જુઓ"
+  },
+  "packages": {
+    "curatedLabel": "તમારા માટે ક્યુરેટેડ",
+    "heroTitle": "લોકપ્રિય ટૂર પેકેજો",
+    "heroSub": "સમગ્ર ભારતમાં હાથથી પસંદ કરેલી મુસાફરી — હિમાલયના શિખરોથી ઉષ્ણકટિબંધીય કિનારા સુધી",
+    "all": "તમામ",
+    "retry": "રીટ્રાય",
+    "noPackages": "આ કેટેગરી માટે કોઈ પેકેજો મળ્યા નથી.",
+    "viewDetails": "ક્ષતિ વિગતો",
+    "perPerson": "વ્યક્તિ દીઠ",
+    "highlights": "હાઇલાઇટ્સ",
+    "itinerary": "પ્રવાસન કાર્યક્રમ",
+    "included": "શું સમાવવામાં આવેલ છે",
+    "hotels": "હોટેલ્સ",
+    "transport": "પરિવહન વિકલ્પો",
+    "nightRate": "રાત્રિ",
+    "guideTitle": "મુસાફરી માર્ગદર્શિકા",
+    "guideAvailable": "વ્યાવસાયિક માર્ગદર્શિકા ઉપલબ્ધ છે",
+    "guideLanguages": "ભાષાઓ ",
+    "bookThis": "આ પેકેજ બુક કરો",
+    "from": "તરફથી",
+    "error": "કંઈક ખોટું થયું"
+  }
+}
