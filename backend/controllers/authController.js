@@ -146,3 +146,33 @@ export async function googleCallback(req, res, next) {
     next(err);
   }
 }
+
+export async function adminLogin(req, res, next) {
+  try {
+    const { email, password } = req.body;
+    const user = await User.findOne({ email, role: "admin" });
+    if (!user || !user.password)
+      return res.status(401).json({ message: "Invalid admin credentials" });
+    const ok = await user.comparePassword(password);
+    if (!ok)
+      return res.status(401).json({ message: "Invalid admin credentials" });
+    sendToken(res, user);
+  } catch (err) {
+    next(err);
+  }
+}
+
+export async function guideLogin(req, res, next) {
+  try {
+    const { email, password } = req.body;
+    const user = await User.findOne({ email, role: "guide" });
+    if (!user || !user.password)
+      return res.status(401).json({ message: "Invalid guide credentials" });
+    const ok = await user.comparePassword(password);
+    if (!ok)
+      return res.status(401).json({ message: "Invalid guide credentials" });
+    sendToken(res, user);
+  } catch (err) {
+    next(err);
+  }
+}

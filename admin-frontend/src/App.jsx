@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AuthProvider, useAuth } from "./AuthContext";
 import LoginPage from "./pages/Login";
+import AdminLogin from "./pages/AdminLogin";    // new login page
 import Dashboard from "./pages/Dashboard";
 import Users from "./pages/Users";
 import Bookings from "./pages/Bookings";
@@ -129,13 +130,20 @@ function Layout() {
 
 function AppInner() {
   const { admin, loading } = useAuth();
+  const [loginMode, setLoginMode] = useState("admin");
   if (loading) return (
     <div style={{ minHeight: "100vh", background: C.bg, display: "flex", alignItems: "center", justifyContent: "center" }}>
       <div style={{ width: 40, height: 40, borderRadius: "50%", border: `3px solid ${C.border}`, borderTopColor: C.accent, animation: "spin .7s linear infinite" }} />
       <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
     </div>
   );
-  return admin ? <Layout /> : <LoginPage />;
+  if (!admin) {
+    // Show admin or guide login based on state
+    return loginMode === "guide"
+      ? <GuideLogin onSwitchToAdmin={() => setLoginMode("admin")} />
+      : <AdminLogin onSwitchToGuide={() => setLoginMode("guide")} />;
+  }
+  return <Layout />;
 }
 
 export default function App() {
