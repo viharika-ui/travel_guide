@@ -56,7 +56,7 @@ export default function Profile() {
         <button type="submit" className="w-full py-3 rounded-lg bg-saffron text-white font-medium">
           {t("dashboard.save")}
         </button>
-        {saved && <p className="text-green-600 text-sm">Saved.</p>}
+        {saved && <p className="text-green-600 text-sm">{t("dashboard.saved")}</p>}
       </form>
     </div>
   );
