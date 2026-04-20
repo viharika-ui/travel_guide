@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import { useTranslation } from "react-i18next";
 import L from "leaflet";
 
 delete L.Icon.Default.prototype._getIconUrl;
@@ -24,6 +25,7 @@ function FitBounds({ destinations }) {
 }
 
 export default function MapView({ destinations, selectedCategory, onCategoryChange }) {
+  const { t } = useTranslation();
   const categories = [...new Set(destinations?.flatMap((d) => d.categories || []) || [])];
 
   return (
@@ -34,7 +36,7 @@ export default function MapView({ destinations, selectedCategory, onCategoryChan
             onClick={() => onCategoryChange(null)}
             className={`px-3 py-1.5 rounded-lg text-sm font-medium shadow ${!selectedCategory ? "bg-saffron text-white" : "bg-white text-slate-700"}`}
           >
-            All
+            {t('map.allCategories')}
           </button>
           {categories.map((cat) => (
             <button

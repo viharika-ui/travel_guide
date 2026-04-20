@@ -239,5 +239,6 @@ function Breadcrumb({ crumbs }) {
 }
 
 function LoadingGrid() {
-  return <div className="dst-grid">Loading...</div>;
+  const { t } = useTranslation();
+  return <div className="dst-grid">{t('common.loading')}</div>;
 }

@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-const languages = ['hi','te','kn','ml','ta','bn','or','pa','gu']; // test first
+const languages = ['hi','te','kn','ml','ta','bn','or','pa','gu','bho'];// test first
 
 const english = JSON.parse(
   fs.readFileSync('./src/i18n/locales/en.json', 'utf-8')

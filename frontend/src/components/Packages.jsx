@@ -1,10 +1,13 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./Packages.css";
 
 const Packages = ({ packages }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="packages">
-      <h2>Popular Packages</h2>
+      <h2>{t('packages.heroTitle')}</h2>
 
       <div className="package-grid">
         {packages.slice(0, 3).map((pkg) => (

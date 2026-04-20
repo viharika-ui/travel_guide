@@ -1,8 +1,12 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useAuth } from "../context/AuthContext";
-import { FaEnvelope, FaLock,FaPersonWalkingLuggage } from "react-icons/fa6";
+import {
+  FaEnvelope,
+  FaLock,
+  FaPersonWalkingLuggage,
+} from "react-icons/fa6";
 
 export default function Register() {
   const { t } = useTranslation();
@@ -19,11 +23,14 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+
     if (password !== confirmPassword) {
-      setError("Passwords do not match");
+      setError(t("auth.passwordMismatch"));
       return;
     }
+
     setLoading(true);
+
     try {
       await register(name, email, password);
       navigate("/dashboard", { replace: true });
@@ -35,195 +42,128 @@ export default function Register() {
   };
 
   return (
-    // <div className="min-h-[70vh] flex items-center justify-center px-4">
-    //   <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8">
-    //     <h1 className="text-2xl font-bold text-navy mb-6">{t("auth.register")}</h1>
-    //     {error && <p className="text-red-600 text-sm mb-4">{error}</p>}
-    //     <form onSubmit={handleSubmit} className="space-y-4">
-    //       <div>
-    //         <label className="block text-sm font-medium text-slate-600">{t("auth.name")}</label>
-    //         <input
-    //           type="text"
-    //           value={name}
-    //           onChange={(e) => setName(e.target.value)}
-    //           required
-    //           className="w-full rounded-lg border border-slate-300 px-4 py-3 mt-1"
-    //         />
-    //       </div>
-    //       <div>
-    //         <label className="block text-sm font-medium text-slate-600">{t("auth.email")}</label>
-    //         <input
-    //           type="email"
-    //           value={email}
-    //           onChange={(e) => setEmail(e.target.value)}
-    //           required
-    //           className="w-full rounded-lg border border-slate-300 px-4 py-3 mt-1"
-    //         />
-    //       </div>
-    //       <div>
-    //         <label className="block text-sm font-medium text-slate-600">{t("auth.password")}</label>
-    //         <input
-    //           type="password"
-    //           value={password}
-    //           onChange={(e) => setPassword(e.target.value)}
-    //           required
-    //           minLength={6}
-    //           className="w-full rounded-lg border border-slate-300 px-4 py-3 mt-1"
-    //         />
-    //       </div>
-    //       <div>
-    //         <label className="block text-sm font-medium text-slate-600">{t("auth.confirmPassword")}</label>
-    //         <input
-    //           type="password"
-    //           value={confirmPassword}
-    //           onChange={(e) => setConfirmPassword(e.target.value)}
-    //           required
-    //           minLength={6}
-    //           className="w-full rounded-lg border border-slate-300 px-4 py-3 mt-1"
-    //         />
-    //       </div>
-    //       <button
-    //         type="submit"
-    //         disabled={loading}
-    //         className="w-full py-3 rounded-lg bg-saffron text-white font-semibold disabled:opacity-50"
-    //       >
-    //         {loading ? t("common.loading") : t("auth.register")}
-    //       </button>
-    //     </form>
-    //     <p className="mt-4 text-center text-slate-600">
-    //       {t("auth.alreadyHaveAccount")}{" "}
-    //       <Link to="/login" className="text-saffron font-medium">
-    //         {t("auth.login")}
-    //       </Link>
-    //     </p>
-    //   </div>
-    // </div>
-//     <body class="login-page">
-//     {/* <!-- Full Screen Video Background --> */}
-//     <div class="fullscreen-video-bg">
-//         <video class="flying-video" autoplay muted loop playsinline>
-//             <source src="https://videos.pexels.com/video-files/2169880/2169880-uhd_2560_1440_30fps.mp4" type="video/mp4"/>
-//         </video>
-//         <div class="video-overlay"></div>
-//     </div>
-    
-//     {/* <!-- Centered Hero Content --> */}
-//     <div class="hero-center-wrapper">
-//         <div class="hero-content-row">
-//             {/* <!-- Left Side - Logo & Title --> */}
-//             <div class="hero-left">
-//                 <div class="logo">
-//                     <i class="fas fa-person-walking-luggage"></i>
-//                     <span>Incredible India</span>
-//                 </div>
-//             </div>
-
-//             {/* <!-- Right Side - Login Form --> */}
-//             <div class="hero-right">
-//                 <form class="auth-form" id="loginForm">
-//                     <div class="input-group">
-//                         <i class="fas fa-envelope"></i>
-//                         <input type="email" placeholder="Email Address" required/>
-//                     </div>
-                    
-//                     <div class="input-group">
-//                         <i class="fas fa-lock"></i>
-//                         <input type="password" placeholder="Password" required/>
-//                         <i class="fas fa-eye toggle-password"></i>
-//                     </div>
-                    
-//                     <div class="form-options">
-//                         <label class="remember-me">
-//                             <input type="checkbox"/>
-//                             <span>Remember me</span>
-//                         </label>
-//                         <a href="#" class="forgot-password">Forgot Password?</a>
-//                     </div>
-                    
-//                     <button type="submit" class="submit-btn">Login</button>
-                    
-//                     <div class="divider">
-//                         <span>or continue with</span>
-//                     </div>
-                    
-//                     <div class="social-login">
-//                         <button type="button" class="social-btn google-btn">
-//                             <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google"/>
-//                             <span>Google</span>
-//                         </button>
-//                     </div>
-//                 </form>
-//             </div>
-//         </div>
-//     </div>
-//     <script src="script.js"></script>
-// </body>
- <body class="login-page">
-    {/* <!-- Full Screen Video Background --> */}
-    <div class="fullscreen-video-bg">
-        <video class="flying-video" autoPlay muted loop playsinline>
-            <source src="https://videos.pexels.com/video-files/2169880/2169880-uhd_2560_1440_30fps.mp4" type="video/mp4"/>
+    <div className="login-page">
+      <div className="fullscreen-video-bg">
+        <video className="flying-video" autoPlay muted loop playsInline>
+          <source
+            src="https://videos.pexels.com/video-files/2169880/2169880-uhd_2560_1440_30fps.mp4"
+            type="video/mp4"
+          />
         </video>
-        <div class="video-overlay"></div>
-    </div>
-    
-    {/* <!-- Centered Hero Content --> */}
-    <div class="hero-center-wrapper">
-        <div class="hero-content-row">
-            {/* <!-- Left Side - Logo & Title --> */}
-            <div class="hero-left">
-                <div class="logo">
-                    
 
-<FaPersonWalkingLuggage size={70} style={{
-    background: "linear-gradient(to right, #60a5fa, #22d3ee)",
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
-  }} />
+        <div className="video-overlay"></div>
+      </div>
 
-                    <span>Incredible India</span>
-                </div>
+      <div className="hero-center-wrapper">
+        <div className="hero-content-row">
+          <div className="hero-left">
+            <div className="logo">
+              <FaPersonWalkingLuggage
+                size={70}
+                style={{
+                  background:
+                    "linear-gradient(to right, #60a5fa, #22d3ee)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              />
+
+              <span>{t("home.heroTitle")}</span>
             </div>
+          </div>
 
-            {/* <!-- Right Side - Login Form --> */}
-            <div className="hero-right">
-                <form className="auth-form" id="loginForm">
-                    <div className="input-group">
-                         <FaEnvelope className="input-icon" />
-                        <input type="email" placeholder="Email Address" required/>
-                    </div>
-                    
-                    <div className="input-group">
-                         <FaLock className="absolute left-3 top-3 text-gray-400 text-lg" />
-                        <input type="password" placeholder="Password" required/>
-                        
-                    </div>
-                    
-                    <div class="form-options">
-                        <label class="remember-me">
-                            <input type="checkbox"/>
-                            <span>Remember me</span>
-                        </label>
-                        <a href="#" class="forgot-password">Forgot Password?</a>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Login</button>
-                    
-                    <div class="divider">
-                        <span>or continue with</span>
-                    </div>
-                    
-                    <div class="social-login">
-                        <button type="button" class="social-btn google-btn">
-                            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google"/>
-                            <span>Google</span>
-                        </button>
-                    </div>
-                </form>
-            </div>
+          <div className="hero-right">
+            <form className="auth-form" onSubmit={handleSubmit}>
+              {error && <p className="text-red-500">{error}</p>}
+
+              <div className="input-group">
+                <input
+                  type="text"
+                  placeholder={t("booking.name")}
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
+              </div>
+
+              <div className="input-group">
+                <FaEnvelope className="input-icon" />
+                <input
+                  type="email"
+                  placeholder={t("auth.email")}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
+
+              <div className="input-group">
+                <FaLock className="input-icon" />
+                <input
+                  type="password"
+                  placeholder={t("auth.password")}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+              </div>
+
+              <div className="input-group">
+                <FaLock className="input-icon" />
+                <input
+                  type="password"
+                  placeholder={t("auth.confirmPassword")}
+                  value={confirmPassword}
+                  onChange={(e) =>
+                    setConfirmPassword(e.target.value)
+                  }
+                  required
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="submit-btn"
+                disabled={loading}
+              >
+                {loading
+                  ? t("common.loading")
+                  : t("auth.register")}
+              </button>
+
+              <div className="divider">
+                <span>{t("auth.orContinueWith")}</span>
+              </div>
+
+              <div className="social-login">
+                <button
+                  type="button"
+                  className="social-btn google-btn"
+                >
+                  <img
+                    src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                    alt="Google"
+                  />
+                  <span>Google</span>
+                </button>
+              </div>
+
+              <p className="mt-4 text-center">
+                {t("auth.alreadyHaveAccount")}{" "}
+                <span
+                  onClick={() => navigate("/login")}
+                  style={{
+                    cursor: "pointer",
+                    fontWeight: "bold",
+                  }}
+                >
+                  {t("auth.login")}
+                </span>
+              </p>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
-    <script src="script.js"></script>
-</body>
   );
 }

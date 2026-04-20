@@ -1,6 +1,6 @@
-// frontend/src/pages/DestinationBooking.jsx
 import React, { useState, useEffect } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./DestinationBooking.css";
 
 const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
@@ -23,50 +23,37 @@ async function apiFetch(path, options = {}) {
   return res.json();
 }
 
-// ── Mock hotels ──────────────────────────────────────────────────────────────
 const MOCK_HOTELS = [
-  { name: "The Grand Palace Hotel",  type: "5-Star Luxury",    pricePerNight: 8500  },
-  { name: "Comfort Inn Suites",       type: "4-Star Comfort",   pricePerNight: 4200  },
-  { name: "Heritage Haveli",          type: "Heritage Boutique", pricePerNight: 5800 },
-  { name: "Budget Stay Inn",          type: "3-Star Budget",    pricePerNight: 1800  },
+  { name: "The Grand Palace Hotel",  type: "5-Star Luxury",     pricePerNight: 8500 },
+  { name: "Comfort Inn Suites",      type: "4-Star Comfort",    pricePerNight: 4200 },
+  { name: "Heritage Haveli",         type: "Heritage Boutique", pricePerNight: 5800 },
+  { name: "Budget Stay Inn",         type: "3-Star Budget",     pricePerNight: 1800 },
 ];
 
 const GUIDE_LANGUAGES = ["English", "Hindi", "Tamil", "Bengali", "Telugu", "Marathi"];
-const GUIDE_RATE = 1500; // per day
+const GUIDE_RATE = 1500;
 
-// ── Transport icons ──────────────────────────────────────────────────────────
-const TRANSPORT_ICONS = {
-  flight: "✈️",
-  train:  "🚆",
-  bus:    "🚌",
-  ferry:  "⛴️",
-};
+const TRANSPORT_ICONS = { flight: "✈️", train: "🚆", bus: "🚌", ferry: "⛴️" };
 
 export default function DestinationBooking() {
   const { id }    = useParams();
   const { state } = useLocation();
   const navigate  = useNavigate();
+  const { t }     = useTranslation();
 
-  const [dest, setDest]           = useState(state?.destination || null);
-  const [loading, setLoading]     = useState(!state?.destination);
-  const [paying, setPaying]       = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [paymentId, setPaymentId] = useState(null);
+  const [dest,              setDest]              = useState(state?.destination || null);
+  const [loading,           setLoading]           = useState(!state?.destination);
+  const [paying,            setPaying]            = useState(false);
+  const [submitted,         setSubmitted]         = useState(false);
+  const [paymentId,         setPaymentId]         = useState(null);
+  const [travelDate,        setTravelDate]        = useState("");
+  const [travelers,         setTravelers]         = useState(1);
+  const [nights,            setNights]            = useState(2);
+  const [selectedHotel,     setSelectedHotel]     = useState(null);
+  const [guideRequired,     setGuideRequired]     = useState(false);
+  const [guideLanguage,     setGuideLanguage]     = useState("");
+  const [selectedTransport, setSelectedTransport] = useState(state?.selectedTransport || null);
 
-  // Booking form state
-  const [travelDate, setTravelDate]       = useState("");
-  const [travelers, setTravelers]         = useState(1);
-  const [nights, setNights]               = useState(2);
-  const [selectedHotel, setSelectedHotel] = useState(null);
-  const [guideRequired, setGuideRequired] = useState(false);
-  const [guideLanguage, setGuideLanguage] = useState("");
-
-  // Transport state (set from TransportSearch page)
-  const [selectedTransport, setSelectedTransport] = useState(
-    state?.selectedTransport || null
-  );
-
-  // Fetch destination if not passed
   useEffect(() => {
     if (!dest && id) {
       fetch(`${API_BASE}/destinations/detail/${id}`)
@@ -76,7 +63,6 @@ export default function DestinationBooking() {
     }
   }, [id, dest]);
 
-  // Razorpay script
   useEffect(() => {
     if (document.getElementById("razorpay-script")) return;
     const s = document.createElement("script");
@@ -89,45 +75,36 @@ export default function DestinationBooking() {
   if (loading) return (
     <div className="db-loading">
       <div className="db-spinner" />
-      <p>Loading booking details...</p>
+      <p>{t('destBooking.loading')}</p>
     </div>
   );
 
   if (!dest) return (
     <div className="db-error">
-      <p>Destination not found.</p>
-      <button onClick={() => navigate("/destination")}>← Back</button>
+      <p>{t('destBooking.notFound')}</p>
+      <button onClick={() => navigate("/destination")}>{t('destBooking.back')}</button>
     </div>
   );
 
-  // ── Price calculation ────────────────────────────────────────────────────
-  const BASE_PRICE     = 2500; // base destination visit price per person
-  const hotelCost      = selectedHotel ? selectedHotel.pricePerNight * nights * travelers : 0;
-  const transportCost  = selectedTransport ? selectedTransport.price * travelers : 0;
-  const guideCost      = guideRequired ? GUIDE_RATE * nights : 0;
-  const grandTotal     = BASE_PRICE * travelers + hotelCost + transportCost + guideCost;
+  const BASE_PRICE    = 2500;
+  const hotelCost     = selectedHotel     ? selectedHotel.pricePerNight * nights * travelers : 0;
+  const transportCost = selectedTransport ? selectedTransport.price * travelers               : 0;
+  const guideCost     = guideRequired     ? GUIDE_RATE * nights                               : 0;
+  const grandTotal    = BASE_PRICE * travelers + hotelCost + transportCost + guideCost;
 
-  // ── Navigate to transport search ─────────────────────────────────────────
   function handleSearchTransport() {
-    navigate(
-      `/transport-search?destination=${encodeURIComponent(dest.name)}&destBookingId=${id}&destName=${encodeURIComponent(dest.name)}`
-    );
+    navigate(`/transport-search?destination=${encodeURIComponent(dest.name)}&destBookingId=${id}&destName=${encodeURIComponent(dest.name)}`);
   }
 
-  // ── Razorpay payment ─────────────────────────────────────────────────────
   async function handlePayment() {
-    if (!travelDate) { alert("Please select a travel date."); return; }
-
+    if (!travelDate) { alert(t('bookingPage.selectDate')); return; }
     try {
       setPaying(true);
-
       const order = await apiFetch("/payment/create-order", {
         method: "POST",
         body: JSON.stringify({ amount: grandTotal }),
       });
-
       const user = JSON.parse(localStorage.getItem("user") || "{}");
-
       const options = {
         key:         import.meta.env.VITE_RAZORPAY_KEY_ID,
         amount:      order.amount,
@@ -137,7 +114,6 @@ export default function DestinationBooking() {
         order_id:    order.id,
         prefill:     { name: user.name || "", email: user.email || "" },
         theme:       { color: "#00bcd4" },
-
         handler: async (response) => {
           try {
             await apiFetch("/payment/verify", {
@@ -151,75 +127,63 @@ export default function DestinationBooking() {
             setPaymentId(response.razorpay_payment_id);
             setSubmitted(true);
           } catch {
-            alert("Payment verification failed. Please contact support.");
+            alert(t('bookingPage.payFailed'));
           } finally {
             setPaying(false);
           }
         },
-
         modal: { ondismiss: () => setPaying(false) },
       };
-
       const rzp = new window.Razorpay(options);
       rzp.on("payment.failed", (r) => {
         alert(`Payment failed: ${r.error.description}`);
         setPaying(false);
       });
       rzp.open();
-
     } catch (err) {
       alert(`Could not initiate payment: ${err.message}`);
       setPaying(false);
     }
   }
 
-  // ── Success screen ────────────────────────────────────────────────────────
   if (submitted) {
     return (
       <div className="db-success">
         <div className="db-success__icon">✓</div>
-        <h2>Booking Confirmed!</h2>
+        <h2>{t('bookingPage.confirmed')}</h2>
         <p>Your trip to <strong>{dest.name}</strong> has been booked successfully.</p>
         {paymentId && (
-          <p className="db-success__pid">Payment ID: <code>{paymentId}</code></p>
+          <p className="db-success__pid">{t('bookingPage.paymentId')}: <code>{paymentId}</code></p>
         )}
-        <p className="db-success__amount">Total Paid: ₹{grandTotal.toLocaleString("en-IN")}</p>
-        <button onClick={() => navigate("/")}>Back to Home</button>
+        <p className="db-success__amount">{t('bookingPage.totalPaid')}: ₹{grandTotal.toLocaleString("en-IN")}</p>
+        <button onClick={() => navigate("/")}>{t('bookingPage.backToHome')}</button>
       </div>
     );
   }
 
-  // ── Main booking form ─────────────────────────────────────────────────────
   return (
     <div className="db-page">
-      {/* Header */}
       <div className="db-header">
-        <button className="db-back-btn" onClick={() => navigate(-1)}>← Back</button>
-        <p className="db-header-label">Destination Booking</p>
+        <button className="db-back-btn" onClick={() => navigate(-1)}>{t('destBooking.back')}</button>
+        <p className="db-header-label">{t('destBooking.label')}</p>
         <h1 className="db-header-title">{dest.name}</h1>
         <p className="db-header-sub">{dest.state} · {dest.region}</p>
       </div>
 
       <div className="db-layout">
-        {/* LEFT */}
         <div className="db-left">
 
-          {/* Trip Details */}
           <section className="db-section">
-            <h2 className="db-section-title">Trip Details</h2>
+            <h2 className="db-section-title">{t('bookingPage.tripDetails')}</h2>
             <div className="db-row">
               <div className="db-field">
-                <label className="db-label">Travel Date</label>
-                <input
-                  type="date"
-                  className="db-input"
-                  value={travelDate}
+                <label className="db-label">{t('bookingPage.travelDate')}</label>
+                <input type="date" className="db-input" value={travelDate}
                   min={new Date().toISOString().split("T")[0]}
-                  onChange={(e) => setTravelDate(e.target.value)}
-                />
+                  onChange={(e) => setTravelDate(e.target.value)} />
               </div>
               <div className="db-field">
-                <label className="db-label">Travelers</label>
+                <label className="db-label">{t('bookingPage.travelers')}</label>
                 <div className="db-stepper">
                   <button onClick={() => setTravelers(Math.max(1, travelers - 1))}>−</button>
                   <span>{travelers}</span>
@@ -227,7 +191,7 @@ export default function DestinationBooking() {
                 </div>
               </div>
               <div className="db-field">
-                <label className="db-label">Nights</label>
+                <label className="db-label">{t('destBooking.nights')}</label>
                 <div className="db-stepper">
                   <button onClick={() => setNights(Math.max(1, nights - 1))}>−</button>
                   <span>{nights}</span>
@@ -237,10 +201,8 @@ export default function DestinationBooking() {
             </div>
           </section>
 
-          {/* Transport */}
           <section className="db-section">
-            <h2 className="db-section-title">Transport</h2>
-
+            <h2 className="db-section-title">{t('bookingPage.transport')}</h2>
             {selectedTransport ? (
               <div className="db-transport-selected">
                 <div className="db-transport-selected__info">
@@ -256,17 +218,17 @@ export default function DestinationBooking() {
                     <p className="db-transport-selected__detail">
                       {selectedTransport.dep || selectedTransport.departure} → {selectedTransport.arr || selectedTransport.arrival}
                       {selectedTransport.class && ` · ${selectedTransport.class}`}
-                      {selectedTransport.dur || selectedTransport.duration ? ` · ${selectedTransport.dur || selectedTransport.duration}` : ""}
+                      {(selectedTransport.dur || selectedTransport.duration) ? ` · ${selectedTransport.dur || selectedTransport.duration}` : ""}
                     </p>
                   </div>
                 </div>
                 <div className="db-transport-selected__right">
                   <p className="db-transport-selected__price">
                     ₹{selectedTransport.price?.toLocaleString("en-IN")}
-                    <span>/person</span>
+                    <span>{t('bookingPage.perPerson')}</span>
                   </p>
                   <button className="db-transport-change-btn" onClick={handleSearchTransport}>
-                    Change
+                    {t('bookingPage.changeTrans')}
                   </button>
                 </div>
               </div>
@@ -279,28 +241,23 @@ export default function DestinationBooking() {
                   <span>⛴️ Ferry</span>
                 </div>
                 <div className="db-transport-prompt__text">
-                  <p className="db-transport-prompt__title">Find the best way to reach {dest.name}</p>
-                  <p className="db-transport-prompt__sub">
-                    Enter your boarding city to see flights, trains, buses & ferries
-                  </p>
+                  <p className="db-transport-prompt__title">{t('destBooking.findBest')} {dest.name}</p>
+                  <p className="db-transport-prompt__sub">{t('destBooking.searchSub')}</p>
                 </div>
                 <button className="db-transport-search-btn" onClick={handleSearchTransport}>
-                  🔍 Search Transport Options
+                  {t('destBooking.searchBtn')}
                 </button>
               </div>
             )}
           </section>
 
-          {/* Hotels */}
           <section className="db-section">
-            <h2 className="db-section-title">Choose Hotel</h2>
+            <h2 className="db-section-title">{t('bookingPage.chooseHotel')}</h2>
             <div className="db-options">
               {MOCK_HOTELS.map((h, i) => (
-                <div
-                  key={i}
+                <div key={i}
                   className={`db-option${selectedHotel?.name === h.name ? " selected" : ""}`}
-                  onClick={() => setSelectedHotel(h)}
-                >
+                  onClick={() => setSelectedHotel(h)}>
                   <div className="db-option__icon">🏨</div>
                   <div className="db-option__info">
                     <p className="db-option__name">{h.name}</p>
@@ -308,56 +265,46 @@ export default function DestinationBooking() {
                   </div>
                   <div className="db-option__price">
                     <span>₹{h.pricePerNight.toLocaleString("en-IN")}</span>
-                    <span className="db-option__per">/night</span>
+                    <span className="db-option__per">{t('bookingPage.perNight')}</span>
                   </div>
                   {selectedHotel?.name === h.name && <span className="db-option__check">✓</span>}
                 </div>
               ))}
-              <div
-                className={`db-option${!selectedHotel ? " selected" : ""}`}
-                onClick={() => setSelectedHotel(null)}
-              >
+              <div className={`db-option${!selectedHotel ? " selected" : ""}`}
+                onClick={() => setSelectedHotel(null)}>
                 <div className="db-option__icon">🏠</div>
                 <div className="db-option__info">
-                  <p className="db-option__name">Own Arrangement</p>
-                  <p className="db-option__sub">I'll book my own hotel</p>
+                  <p className="db-option__name">{t('bookingPage.ownArrangement')}</p>
+                  <p className="db-option__sub">{t('bookingPage.ownHotel')}</p>
                 </div>
-                <div className="db-option__price"><span>Free</span></div>
+                <div className="db-option__price"><span>{t('bookingPage.free')}</span></div>
                 {!selectedHotel && <span className="db-option__check">✓</span>}
               </div>
             </div>
           </section>
 
-          {/* Travel Guide */}
           <section className="db-section">
-            <h2 className="db-section-title">Travel Guide</h2>
+            <h2 className="db-section-title">{t('bookingPage.travelGuide')}</h2>
             <div className="db-guide-toggle">
               <div className="db-guide-info">
                 <span className="db-guide-icon">🧭</span>
                 <div>
-                  <p className="db-option__name">Professional Guide</p>
-                  <p className="db-option__sub">₹1,500/day · Multilingual</p>
+                  <p className="db-option__name">{t('bookingPage.proGuide')}</p>
+                  <p className="db-option__sub">{t('destBooking.multilingual')}</p>
                 </div>
               </div>
               <label className="db-toggle">
-                <input
-                  type="checkbox"
-                  checked={guideRequired}
-                  onChange={(e) => setGuideRequired(e.target.checked)}
-                />
+                <input type="checkbox" checked={guideRequired}
+                  onChange={(e) => setGuideRequired(e.target.checked)} />
                 <span className="db-toggle__slider" />
               </label>
             </div>
-
             {guideRequired && (
               <div className="db-field" style={{ marginTop: "14px" }}>
-                <label className="db-label">Preferred Language</label>
-                <select
-                  className="db-input"
-                  value={guideLanguage}
-                  onChange={(e) => setGuideLanguage(e.target.value)}
-                >
-                  <option value="">Select language</option>
+                <label className="db-label">{t('bookingPage.prefLang')}</label>
+                <select className="db-input" value={guideLanguage}
+                  onChange={(e) => setGuideLanguage(e.target.value)}>
+                  <option value="">{t('bookingPage.selectLang')}</option>
                   {GUIDE_LANGUAGES.map((lang) => (
                     <option key={lang} value={lang}>{lang}</option>
                   ))}
@@ -367,55 +314,47 @@ export default function DestinationBooking() {
           </section>
         </div>
 
-        {/* RIGHT: Summary */}
         <div className="db-right">
           <div className="db-summary">
             <img src={dest.image} alt={dest.name} className="db-summary__img" />
             <div className="db-summary__body">
               <h3 className="db-summary__title">{dest.name}</h3>
               <p className="db-summary__sub">{dest.state}</p>
-              <p className="db-summary__sub">{nights} night{nights > 1 ? "s" : ""} · {travelers} traveler{travelers > 1 ? "s" : ""}</p>
-
+              <p className="db-summary__sub">
+                {nights} night{nights > 1 ? "s" : ""} · {travelers} traveler{travelers > 1 ? "s" : ""}
+              </p>
               <div className="db-summary__breakdown">
                 <div className="db-summary__row">
-                  <span>Base price ({travelers}x)</span>
+                  <span>{t('bookingPage.basePrice')} ({travelers}x)</span>
                   <span>₹{(BASE_PRICE * travelers).toLocaleString("en-IN")}</span>
                 </div>
                 {hotelCost > 0 && (
                   <div className="db-summary__row">
-                    <span>Hotel ({nights} nights)</span>
+                    <span>{t('bookingPage.hotel')} ({nights} {t('bookingPage.nights')})</span>
                     <span>₹{hotelCost.toLocaleString("en-IN")}</span>
                   </div>
                 )}
                 {transportCost > 0 && (
                   <div className="db-summary__row">
-                    <span>Transport ({travelers}x)</span>
+                    <span>{t('bookingPage.transport')} ({travelers}x)</span>
                     <span>₹{transportCost.toLocaleString("en-IN")}</span>
                   </div>
                 )}
                 {guideCost > 0 && (
                   <div className="db-summary__row">
-                    <span>Guide ({nights} days)</span>
+                    <span>{t('bookingPage.guide')} ({nights} {t('bookingPage.days')})</span>
                     <span>₹{guideCost.toLocaleString("en-IN")}</span>
                   </div>
                 )}
                 <div className="db-summary__total">
-                  <span>Grand Total</span>
+                  <span>{t('bookingPage.grandTotal')}</span>
                   <span>₹{grandTotal.toLocaleString("en-IN")}</span>
                 </div>
               </div>
-
-              <button
-                className="db-confirm-btn"
-                onClick={handlePayment}
-                disabled={paying}
-              >
-                {paying ? "Processing..." : `Pay ₹${grandTotal.toLocaleString("en-IN")}`}
+              <button className="db-confirm-btn" onClick={handlePayment} disabled={paying}>
+                {paying ? t('bookingPage.processing') : `Pay ₹${grandTotal.toLocaleString("en-IN")}`}
               </button>
-
-              <p className="db-secure-note">
-                🔒 Secured by Razorpay · UPI, Cards, NetBanking
-              </p>
+              <p className="db-secure-note">{t('destBooking.secure')}</p>
             </div>
           </div>
         </div>
