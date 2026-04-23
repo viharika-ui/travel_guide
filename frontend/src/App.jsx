@@ -11,7 +11,7 @@ import Dashboard from "./pages/Dashboard";
 import GoogleAuthCallback from "./pages/GoogleAuthCallback";
 import Auth from "./pages/Auth";
 import Navbar from "./components/Navbar";
-import Profile from "./pages/Profile";
+import Profile from "./pages/ProfilePage";
 import Packages from "./pages/Packages";
 import PackageDetails from "./pages/PackageDetails";
 import "leaflet/dist/leaflet.css";

@@ -19,6 +19,7 @@ const cookieOptions = {
   maxAge: 7 * 24 * 60 * 60 * 1000,
 };
 
+// Replace your existing sendToken function with this:
 function sendToken(res, user) {
   const token = jwt.sign(
     { userId: user._id },
@@ -34,6 +35,11 @@ function sendToken(res, user) {
       role: user.role,
       preferredLanguage: user.preferredLanguage,
       avatar: user.avatar,
+      phone: user.phone,
+      loyaltyPoints: user.loyaltyPoints,
+      isEmailVerified: user.isEmailVerified,
+      travelStyle: user.travelStyle,
+      notificationsEnabled: user.notificationsEnabled,
     },
     token,
   });

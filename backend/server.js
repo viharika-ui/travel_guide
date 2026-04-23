@@ -78,7 +78,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import express from "express";
 import cors from "cors";
-import cookieParser from "cookie-parser";
+import cookieParser from "cookie-parser"; 
 import mongoose from "mongoose";
 import { errorHandler } from "./middleware/errorHandler.js";
 import authRoutes from "./routes/auth.js";
@@ -103,39 +103,23 @@ const allowedOrigins = [
 ].filter(Boolean);
 
 console.log("Allowed origins:", allowedOrigins);
-// app.use(
-//   cors({
-//     origin: [
-//   "http://localhost:5173",
-//   "http://localhost:5174" ],
-//     credentials: true,
-//   })
-// );
-// app.use(express.json());
-// app.use(cors({
-//   origin: function (origin, callback) {
-//     console.log("Request Origin:", origin); // 👈 ADD THIS
-//     callback(null, true);
-//   },
-//   credentials: true
-// }));
-// app.options("*", cors());
-// app.use(cors({
-//     origin: "*",
-//     credentials: true
-//   }))
-// app.use(cookieParser());
+app.use(cors({
+  origin: ["http://localhost:5173", "http://localhost:5174"],
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"], // ✅ ADD PATCH
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
+
+// also fix preflight
+app.options("*", cors({
+  origin: ["http://localhost:5173", "http://localhost:5174"],
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
 app.use(express.json());
 
-app.use(cors({
-  origin: allowedOrigins,
-  credentials: true
-}));
 
-app.options("*", cors({
-  origin: allowedOrigins,
-  credentials: true
-}));
 
 app.use(cookieParser());
 
