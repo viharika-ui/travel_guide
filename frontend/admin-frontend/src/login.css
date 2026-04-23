@@ -1,0 +1,115 @@
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f9ff;
+}
+
+.login-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 40px rgba(79, 195, 247, 0.2);
+  border: 1px solid #B3E5FC;
+}
+
+.login-card h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 28px;
+  margin-top: 0;
+}
+
+.login-card h2 .highlight {
+  color: #4FC3F7;
+}
+
+.login-card label {
+  display: block;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 6px;
+  margin-top: 16px;
+}
+
+.login-card input[type="email"],
+.login-card input[type="password"],
+.login-card input[type="text"] {
+  width: 100%;
+  padding: 12px 14px;
+  background: #f8fafc !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #1a1a2e !important;
+  outline: none;
+  box-sizing: border-box;
+  transition: background 0.2s, border 0.2s;
+  -webkit-text-fill-color: #1a1a2e !important;
+}
+
+.login-card input[type="email"]:focus,
+.login-card input[type="password"]:focus {
+  background: #ffffff !important;
+  border-color: #4FC3F7 !important;
+}
+
+.login-card input::placeholder {
+  color: #aaa !important;
+  -webkit-text-fill-color: #aaa !important;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 24px;
+  background: #4FC3F7 !important;
+  color: #ffffff !important;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  display: block;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+.login-btn:hover {
+  background: #0288D1 !important;
+}
+
+.login-btn:active {
+  transform: scale(0.98);
+}
+
+.switch-link {
+  text-align: center;
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.switch-link span {
+  color: #00BCD4;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.error-msg {
+  color: #ef4444;
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 8px;
+  background: #fef2f2;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #fca5a5;
+}

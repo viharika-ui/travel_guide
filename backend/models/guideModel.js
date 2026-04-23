@@ -19,6 +19,7 @@ const guideSchema = new mongoose.Schema(
     regions: { type: [String], default: [] },       // e.g. ["Odisha", "Rajasthan"]
     rating: { type: Number, default: 0 },
     reviewsCount: { type: Number, default: 0 },
+    recentReviews: { type: [Object], default: [] },
   },
   { minimize: false }
 );

@@ -1,6 +1,15 @@
 {
+  "scripts": {
+    "dev:admin": "npm run dev --prefix frontend/admin-frontend -- --port 5174 --strictPort",
+    "dev:user": "npm run dev --prefix frontend/user-frontend -- --port 5173 --strictPort",
+    "dev:backend": "npm start --prefix backend",
+    "dev:all": "concurrently \"npm run dev:backend\" \"npm run dev:admin\" \"npm run dev:user\""
+  },
   "dependencies": {
     "leaflet": "^1.9.4",
     "react-leaflet": "^5.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
   }
 }

@@ -1,5 +1,6 @@
 import User from "../models/User.js";
 import Booking from "../models/Booking.js";
+import bookingModel from "../models/bookingModel.js";
 import Package from "../models/Package.js";
 import Destination from "../models/Destination.js";
 import Region from "../models/Region.js";
@@ -11,75 +12,50 @@ export async function getDashboardStats(req, res) {
   try {
     const [
       totalUsers,
+      totalGuides,
       totalBookings,
       totalPackages,
       totalDestinations,
       totalRegions,
       totalStates,
-      totalNewsletterSubscribers,
       recentBookings,
       recentUsers,
     ] = await Promise.all([
       User.countDocuments({ role: "user" }),
+      User.countDocuments({ role: "guide" }),
       Booking.countDocuments(),
       Package.countDocuments(),
       Destination.countDocuments(),
       Region.countDocuments(),
       State.countDocuments(),
-      Newsletter.countDocuments(),
       Booking.find()
         .sort({ createdAt: -1 })
         .limit(5)
         .populate("userId", "name email avatar")
         .lean(),
-      User.find({ role: "user" })
+      User.find({ role: { $in: ["user", "guide"] } })
         .sort({ createdAt: -1 })
         .limit(5)
         .select("name email avatar createdAt")
         .lean(),
     ]);
 
-    // Total revenue from paid bookings
-    const revenueData = await Booking.aggregate([
-      { $match: { paymentStatus: "paid" } },
-      { $group: { _id: null, total: { $sum: "$totalPrice" } } },
-    ]);
-    const totalRevenue = revenueData[0]?.total || 0;
-
     // Bookings by payment status
     const bookingsByStatus = await Booking.aggregate([
       { $group: { _id: "$paymentStatus", count: { $sum: 1 } } },
     ]);
 
-    // Monthly revenue for last 6 months
-    const sixMonthsAgo = new Date();
-    sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
-
-    const monthlyRevenue = await Booking.aggregate([
-      { $match: { paymentStatus: "paid", createdAt: { $gte: sixMonthsAgo } } },
-      {
-        $group: {
-          _id: { year: { $year: "$createdAt" }, month: { $month: "$createdAt" } },
-          revenue: { $sum: "$totalPrice" },
-          bookings: { $sum: 1 },
-        },
-      },
-      { $sort: { "_id.year": 1, "_id.month": 1 } },
-    ]);
-
     res.json({
       stats: {
         totalUsers,
+        totalGuides,
         totalBookings,
         totalPackages,
         totalDestinations,
         totalRegions,
         totalStates,
-        totalNewsletterSubscribers,
-        totalRevenue,
       },
       bookingsByStatus,
-      monthlyRevenue,
       recentBookings,
       recentUsers,
     });
@@ -223,6 +199,42 @@ export async function deleteBooking(req, res) {
     const booking = await Booking.findByIdAndDelete(req.params.id);
     if (!booking) return res.status(404).json({ message: "Booking not found" });
     res.json({ message: "Booking deleted successfully" });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+}
+
+export async function getAllGuideBookings(req, res) {
+  try {
+    const { page = 1, limit = 10, search = "", paymentStatus = "" } = req.query;
+    const filter = {};
+    if (paymentStatus) filter.paymentStatus = paymentStatus;
+    
+    // Optionally add search filter over userData/guideData here later
+
+    const bookings = await bookingModel.find(filter)
+      .skip((page - 1) * limit)
+      .limit(+limit)
+      .sort({ createdAt: -1 })
+      .lean();
+
+    const total = await bookingModel.countDocuments(filter);
+    res.json({
+      bookings,
+      page: +page,
+      pages: Math.ceil(total / limit),
+      total,
+    });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+}
+
+export async function deleteGuideBooking(req, res) {
+  try {
+    const booking = await bookingModel.findByIdAndDelete(req.params.id);
+    if (!booking) return res.status(404).json({ message: "Booking not found" });
+    res.json({ message: "Guide Booking deleted successfully" });
   } catch (err) {
     res.status(500).json({ message: err.message });
   }

@@ -16,12 +16,20 @@ const bookingSchema = new mongoose.Schema({
   guideData:    { type: Object, required: true },
   amount:       { type: Number, required: true },
   date:         { type: Number, required: true },
+  accepted:     { type: Boolean, default: false },
   cancelled:    { type: Boolean, default: false },
   payment:      { type: Boolean, default: false },
+  paymentStatus:{ type: String, default: "unpaid" }, // unpaid | cash_pending | paid
+  paymentMethod:{ type: String, default: "cash" },   // cash | online
+  paymentId:    { type: String, default: "" },
   isCompleted:  { type: Boolean, default: false },
   tourType:     { type: String, default: "" },      // e.g. "Heritage", "Adventure"
   groupSize:    { type: Number, default: 1 },
   notes:        { type: String, default: "" },      // special requests
+  reviewRating: { type: Number, min: 1, max: 5, default: null },
+  reviewText:   { type: String, default: "" },
+  reviewedAt:   { type: Date, default: null },
+  isReviewed:   { type: Boolean, default: false },
 });
 
 const bookingModel =

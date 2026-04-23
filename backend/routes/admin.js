@@ -17,6 +17,8 @@ import {
   getBookingById,
   updateBookingStatus,
   deleteBooking,
+  getAllGuideBookings,
+  deleteGuideBooking,
 
   // Packages
   getAllPackagesAdmin,
@@ -75,6 +77,9 @@ router.get("/bookings", getAllBookings);
 router.get("/bookings/:id", getBookingById);
 router.patch("/bookings/:id/status", updateBookingStatus);
 router.delete("/bookings/:id", deleteBooking);
+
+router.get("/guide-bookings", getAllGuideBookings);
+router.delete("/guide-bookings/:id", deleteGuideBooking);
 
 // ─── PACKAGE MANAGEMENT ──────────────────────────────────────────────────────
 // GET    /api/admin/packages             → list all packages (search, page)

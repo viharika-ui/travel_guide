@@ -1,7 +1,8 @@
 import express from "express";
 import { register, login, googleAuth, logout, me, googleRedirect, googleCallback,
   adminLogin, 
-  guideLogin, } from "../controllers/authController.js";
+  guideLogin,
+  guideRegister } from "../controllers/authController.js";
 import { auth } from "../middleware/auth.js";
 
 const router = express.Router();
@@ -14,4 +15,5 @@ router.post("/logout", auth, logout);
 router.get("/me", auth, me);
 router.post("/admin/login", adminLogin);
 router.post("/guide/login", guideLogin);
+router.post("/guide/register", guideRegister);
 export default router;

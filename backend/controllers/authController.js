@@ -44,7 +44,7 @@ export async function register(req, res, next) {
     const { name, email, password } = req.body;
     let user = await User.findOne({ email });
     if (user) return res.status(400).json({ message: "Email already registered" });
-    user = await User.create({ name, email, password });
+    user = await User.create({ name, email, password, role: "user" });
     sendToken(res, user);
   } catch (err) {
     next(err);
@@ -80,6 +80,7 @@ export async function googleAuth(req, res, next) {
           name: payload.name || payload.email,
           email: payload.email,
           googleId: payload.sub,
+          role: "user"
         });
       }
     }
@@ -132,6 +133,7 @@ export async function googleCallback(req, res, next) {
           name: payload.name || payload.email,
           email: payload.email,
           googleId: payload.sub,
+          role: "user"
         });
       }
     }
@@ -150,6 +152,24 @@ export async function googleCallback(req, res, next) {
 export async function adminLogin(req, res, next) {
   try {
     const { email, password } = req.body;
+
+    // Hardcoded manual admin check for ease of access
+    const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "admin@incredibleindia.com";
+    const ADMIN_PASS = process.env.ADMIN_PASS || "admin@123";
+
+    if (email === ADMIN_EMAIL && password === ADMIN_PASS) {
+      // Create a mock user object to encode in token
+      const mockAdmin = { _id: "admin-static-id", name: "Admin", email, role: "admin" };
+      const token = jwt.sign(
+        { userId: mockAdmin._id, role: mockAdmin.role },
+        process.env.JWT_SECRET || "secret",
+        { expiresIn: "7d" }
+      );
+      res.cookie("token", token, cookieOptions);
+      return res.json({ user: mockAdmin, token });
+    }
+
+    // Fallback to database
     const user = await User.findOne({ email, role: "admin" });
     if (!user || !user.password)
       return res.status(401).json({ message: "Invalid admin credentials" });
@@ -171,6 +191,20 @@ export async function guideLogin(req, res, next) {
     const ok = await user.comparePassword(password);
     if (!ok)
       return res.status(401).json({ message: "Invalid guide credentials" });
+    sendToken(res, user);
+  } catch (err) {
+    next(err);
+  }
+}
+
+export async function guideRegister(req, res, next) {
+  try {
+    const { name, email, password, phone } = req.body;
+    let user = await User.findOne({ email });
+    if (user) return res.status(400).json({ message: "Email already registered" });
+    
+    // Explicitly create user as a guide
+    user = await User.create({ name, email, password, phone, role: "guide" });
     sendToken(res, user);
   } catch (err) {
     next(err);
