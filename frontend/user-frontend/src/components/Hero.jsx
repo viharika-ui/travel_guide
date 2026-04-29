@@ -1,16 +1,19 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./Hero.css";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="hero">
       <div className="hero-overlay">
-        <h1>Incredible India</h1>
-        <p>Discover the land of diversity, culture and heritage</p>
+        <h1>{t('home.heroTitle')}</h1>
+        <p>{t('home.heroSubtitle')}</p>
 
         <input
           type="text"
-          placeholder="Search destinations..."
+          placeholder={t('home.searchPlaceholder')}
           className="search-box"
         />
       </div>
