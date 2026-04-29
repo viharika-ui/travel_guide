@@ -42,13 +42,8 @@ const userSchema = new mongoose.Schema(
   {
     name: { type: String, required: true, trim: true },
     email: { type: String, required: true, unique: true, lowercase: true, trim: true },
-<<<<<<< HEAD
-    password: { type: String },
-    role: { type: String, enum: ["user", "admin", "guide"], default: "user" },
-=======
     password: { type: String, default: null },
     role: { type: String, enum: ["user", "admin","guide"], default: "user" },
->>>>>>> 4d7e29f (feat: add i18n multilingual support for all components)
     googleId: { type: String, default: null },
     preferredLanguage: { type: String, default: "en" },
     avatar: { type: String, default: "" },

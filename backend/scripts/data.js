@@ -16,13 +16,13 @@ const data = [
           {
             name: "Alleppey",
             description: "Known for serene backwaters and luxurious houseboats",
-            image: "https://images.unsplash.com/photo-1609147855836-d25aded9e8e9?w=600&q=80",
+            image: "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             bestTimeToVisit: "November – February"
           },
           {
             name: "Wayanad",
             description: "Lush forests, waterfalls and tribal heritage",
-            image: "https://images.unsplash.com/photo-1580889240948-c80e5f455ae7?w=600&q=80",
+            image: "https://plus.unsplash.com/premium_photo-1661962772428-f17249503156?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             bestTimeToVisit: "October – May"
           },
           {
@@ -64,7 +64,7 @@ const data = [
           {
             name: "Hampi",
             description: "UNESCO World Heritage ruins of the Vijayanagara Empire",
-            image: "https://images.unsplash.com/photo-1615645151316-e2e19d1ef92f?w=600&q=80",
+            image: "https://images.unsplash.com/photo-1616606484004-5ef3cc46e39d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             bestTimeToVisit: "October – February"
           },
           {
@@ -83,7 +83,7 @@ const data = [
       },
       {
         name: "Andhra Pradesh",
-        image: "https://images.unsplash.com/photo-1599930113854-d6d7fd522214?w=600&q=80",
+        image: "https://images.unsplash.com/photo-1741003412854-bd4b264c4af3?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         destinations: [
           {
             name: "Tirupati",
@@ -137,7 +137,7 @@ const data = [
       },
       {
         name: "Rajasthan",
-        image: "https://images.unsplash.com/photo-1477587458883-47145ed6a6a6?w=600&q=80",
+        image: "https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         destinations: [
           {
             name: "Jaipur",
@@ -148,7 +148,7 @@ const data = [
           {
             name: "Jaisalmer",
             description: "Golden Fort rising from the Thar Desert sands",
-            image: "https://images.unsplash.com/photo-1598977763459-1e899fcfdf8b?w=600&q=80",
+            image: "https://plus.unsplash.com/premium_photo-1661962428918-6a57ab674e23?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             bestTimeToVisit: "November – March"
           },
           {
@@ -160,7 +160,7 @@ const data = [
           {
             name: "Pushkar",
             description: "Sacred lake town famous for the annual camel fair",
-            image: "https://images.unsplash.com/photo-1603695374938-9f6bc7d28f0d?w=600&q=80",
+            image: "https://plus.unsplash.com/premium_photo-1697730426227-9056296a0315?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             bestTimeToVisit: "October – March"
           }
         ]
@@ -191,7 +191,7 @@ const data = [
       },
       {
         name: "Jammu & Kashmir",
-        image: "https://images.unsplash.com/photo-1566837945700-30057527ade0?w=600&q=80",
+        image: "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         destinations: [
           {
             name: "Srinagar",
@@ -221,7 +221,7 @@ const data = [
     states: [
       {
         name: "West Bengal",
-        image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&q=80",
+        image: "https://images.unsplash.com/photo-1605853422175-670791058971?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         destinations: [
           {
             name: "Darjeeling",
@@ -269,7 +269,7 @@ const data = [
       },
       {
         name: "Sikkim",
-        image: "https://images.unsplash.com/photo-1571993084503-8ed3ea1bdf9b?w=600&q=80",
+        image: "https://images.unsplash.com/photo-1615966192539-f1731963b19a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         destinations: [
           {
             name: "Gangtok",
@@ -287,7 +287,7 @@ const data = [
       },
       {
         name: "Assam",
-        image: "https://images.unsplash.com/photo-1580889240948-c80e5f455ae7?w=600&q=80",
+        image: "https://images.unsplash.com/photo-1602020277972-fd160de66021?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         destinations: [
           {
             name: "Kaziranga National Park",
@@ -307,7 +307,7 @@ const data = [
   },
   {
     name: "West India",
-    image: "https://images.unsplash.com/photo-1477587458883-47145ed6a6a6?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1660145416818-b9a2b1a1f193?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     states: [
       {
         name: "Goa",
@@ -385,7 +385,7 @@ const data = [
   },
   {
     name: "Central India",
-    image: "https://images.unsplash.com/photo-1615645151316-e2e19d1ef92f?w=600&q=80",
+    image: "https://plus.unsplash.com/premium_photo-1661963629241-52c812d5c7f8?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     states: [
       {
         name: "Madhya Pradesh",
@@ -437,12 +437,12 @@ const data = [
       },
       {
         name: "Telangana",
-        image: "https://images.unsplash.com/photo-1599930113854-d6d7fd522214?w=600&q=80",
+        image: "https://images.unsplash.com/photo-1551161242-b5af797b7233?q=80&w=1151&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         destinations: [
           {
             name: "Hyderabad",
             description: "City of pearls with Charminar, biriyani and IT culture",
-            image: "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613?w=600&q=80",
+            image: "https://images.unsplash.com/photo-1730315661998-dadff57d7f8c?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             bestTimeToVisit: "October – February"
           },
           {

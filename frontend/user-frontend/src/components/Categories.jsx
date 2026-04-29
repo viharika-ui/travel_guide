@@ -6,20 +6,20 @@ const Categories = () => {
   const { t } = useTranslation();
 
   const items = [
-    t('categories.adventure'),
-    t('categories.beaches'),
-    t('categories.heritage'),
-    t('categories.nature'),
+    "adventure",
+    "beaches",
+    "heritage",
+    "nature",
   ];
 
   return (
     <div className="categories">
-      <h2>{t('categories.title')}</h2>
+      <h2>{t("categories.title")}</h2>
 
       <div className="cat-list">
-        {items.map((c, i) => (
+        {items.map((key, i) => (
           <div key={i} className="cat-item">
-            {c}
+            {t(`categories.${key}`)}
           </div>
         ))}
       </div>
